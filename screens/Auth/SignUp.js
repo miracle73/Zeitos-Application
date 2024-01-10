@@ -42,16 +42,6 @@ const SignUp = () => {
     }, [navigation]);
 
     return (
-<<<<<<< HEAD
-        <ScrollView >
-            <View style={tw`flex justify-start items-start gap-8 p-4 bg-white h-full px-10`}>
-                <View style={tw`flex justify-start items-start gap-6`}>
-                    <Text style={tw`w-[135px] text-3xl text-black`}>
-                        Create Account
-                    </Text>
-                    <Text style={tw`w-[235px] text-sm text-[#8C8CA1]`}>
-                        Kindly create an Ushift account with either of the options below
-=======
         <ScrollView>
             <View style={tw`gap-8 bg-[#F5F7FF] h-full p-4`}>
                 <View style={tw`flex flex-col justify-start items-start gap-6`}>
@@ -60,16 +50,11 @@ const SignUp = () => {
                     </Text>
                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'w-[201px] text-sm text-[#8C8CA1]')}>
                         Kindly create an <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-sm text-black')}>Ushift</Text> account with either of the options below
->>>>>>> acf9eb4e00702060434cc99b6014349a985d7511
                     </Text>
                 </View>
                 <View style={tw`flex justify-center items-center gap-8 px-4 bg-white rounded-lg`}>
                     <View style={tw`flex flex-col justify-center items-center gap-5`}>
-<<<<<<< HEAD
-                        <View style={tw`flex flex-row justify-center items-center gap-8 bg-gray-300 rounded-lg py-5 px-5 `}>
-=======
                         <View style={tw`flex flex-row justify-center items-center gap-8 bg-[#f5f7ff] rounded-lg py-5 px-5 m-4`}>
->>>>>>> acf9eb4e00702060434cc99b6014349a985d7511
                             <Ionicons name="logo-google" size={24} color="#ff0000" />
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-black text-base text-center')}>Create Account with Google</Text>
                         </View>
