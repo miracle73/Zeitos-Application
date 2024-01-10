@@ -12,17 +12,17 @@ const SignUp = () => {
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
     return (
-        <ScrollView>
-            <View style={tw`flex justify-start items-start gap-8 p-4 bg-white h-full`}>
+        <ScrollView >
+            <View style={tw`flex justify-start items-start gap-8 p-4 bg-white h-full px-10`}>
                 <View style={tw`flex justify-start items-start gap-6`}>
                     <Text style={tw`w-[135px] text-3xl text-black`}>
                         Create Account
                     </Text>
-                    <Text style={tw`w-[201px] text-sm text-[#8C8CA1]`}>
+                    <Text style={tw`w-[235px] text-sm text-[#8C8CA1]`}>
                         Kindly create an Ushift account with either of the options below
                     </Text>
                     <View style={tw`flex flex-col justify-center items-center gap-5`}>
-                        <View style={tw`flex flex-row justify-center items-center gap-8 bg-gray-300 rounded-lg py-5 px-5`}>
+                        <View style={tw`flex flex-row justify-center items-center gap-8 bg-gray-300 rounded-lg py-5 px-5 `}>
                             <Ionicons name="logo-google" size={24} color="#ff0000" />
                             <Text style={tw`text-black text-medium text-center`}>Create Account with Google</Text>
                         </View>

@@ -3,6 +3,7 @@ import { StyleSheet, } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import SignUp from './screens/Auth/SignUp';
+import Welcome from './screens/Welcome';
 
 const Stack = createStackNavigator();
 
@@ -11,7 +12,7 @@ export default function App() {
     <>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Create Account" component={SignUp} options={{ headerTitle: "" }} />
+          <Stack.Screen name="Create Account" component={Welcome} options={{ headerTitle: "" }} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style='dark' />
