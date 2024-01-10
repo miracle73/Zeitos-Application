@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, Pressable } from 'react-native'
 import { useState, useEffect } from 'react'
 import tw from 'twrnc';
 import { useNavigation } from "@react-navigation/native";
@@ -27,12 +27,15 @@ const SignUp = () => {
         navigation.setOptions({
             headerRight: () => {
                 return (
-                    <View style={tw`bg-white rounded-lg m-2 pt-[11px] pb-[10px] pl-[17px] pr-[18px]`}>
+                    <Pressable
+                        style={tw`bg-white rounded-lg m-2 pt-[11px] pb-[10px] pl-[17px] pr-[18px]`}
+                        onPress={() => navigation.navigate("Login")}
+                    >
                         <Text
                             style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-sm text-center w-[44px]')}>
                             Log in
                         </Text>
-                    </View>
+                    </Pressable>
                 )
             }
         })

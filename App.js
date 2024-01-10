@@ -2,13 +2,13 @@ import { useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
 
 //import components
 import SignUp from './screens/Auth/SignUp';
 import Welcome from './screens/Welcome';
 import Login from './screens/Auth/Login';
-import { useFonts } from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -40,7 +40,7 @@ export default function App() {
         <Stack.Navigator>
           <Stack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }} />
           <Stack.Screen name="Create Account" component={SignUp} options={{ headerTitle: "", headerStyle: { backgroundColor: "#f5f7ff" } }} />
-          <Stack.Screen name="Login" component={Login} options={{ headerTitle: "" }} />
+          <Stack.Screen name="Login" component={Login} options={{ headerTitle: "", headerStyle: { backgroundColor: "#f5f7ff" } }} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style='dark' />

@@ -12,7 +12,7 @@ const Welcome = () => {
     return (
         <>
             <StatusBar style="light" />
-            <ImageBackground source={require("../assets/image.png")} resizeMode='cover' style={tw`w-full h-full justify-center items-center`} blurRadius={1}>
+            <ImageBackground source={require("../assets/first-image.png")} resizeMode='cover' style={tw`w-full h-full justify-center items-center`} blurRadius={4}>
                 <View style={tw`flex justify-center items-center gap-8 mt-80`}>
                     <View style={tw`flex justify-start items-start gap-2`}>
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-white text-3xl')}>Welcome to Ushift</Text>
@@ -29,7 +29,6 @@ const Welcome = () => {
                     </View>
                 </View>
             </ImageBackground>
-
         </>
     )
 }
