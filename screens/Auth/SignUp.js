@@ -73,7 +73,7 @@ const SignUp = () => {
 
                     <View style={tw`flex flex-row justify-center items-center`}>
                         <CustomButton style={tw`bg-[#001c46] rounded-lg py-4 px-8 w-[326px]`}>
-                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-white text-base text-center')}>Create Account</Text>
+                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-white text-base text-center')} onPress={() => navigation.navigate("Verify Email")}>Create Account</Text>
                         </CustomButton>
                     </View>
                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-center text-[#4a4a68]')}>By creating an you agree Ushift Privacy Policy and Terms of service</Text>

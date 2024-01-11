@@ -36,12 +36,13 @@ const Login = () => {
       }
     })
   }, [navigation]);
+
   return (
     <ScrollView>
       <View style={tw`bg-[#f5f7ff] h-full p-4]`}>
         <View style={tw`flex justify-start items-start p-2`}>
-          <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'w-[272px] h-[76px] text-[#141414] text-3xl')}>Welcome 👋 </Text>
-          <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Login to your account</Text>
+          <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'w-[272px] h-[76px] text-[#141414] text-3xl')}>Welcome 👋{"\n"} Login to your account</Text>
+          {/* <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Login to your account</Text> */}
         </View>
         <View style={tw`bg-white flex justify-center items-center gap-8 px-4 py-5 rounded-lg`}>
           <View style={tw`flex flex-col justify-center items-center gap-5`}>

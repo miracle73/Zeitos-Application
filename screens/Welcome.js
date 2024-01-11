@@ -3,6 +3,7 @@ import React from 'react'
 import tw from "twrnc";
 import { useNavigation } from "@react-navigation/native"
 
+//import components
 import CustomButton from '../components/CustomButton';
 
 const Welcome = () => {
