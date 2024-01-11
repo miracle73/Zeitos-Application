@@ -1,4 +1,4 @@
-import { Text, View, Pressable, ScrollView } from 'react-native';
+import { Text, View, Pressable } from 'react-native';
 import { useState, useEffect } from 'react';
 import tw from 'twrnc';
 import { useNavigation } from "@react-navigation/native";
@@ -59,7 +59,7 @@ const Login = () => {
           </View>
           <View style={tw`flex flex-row justify-end items-end gap-4`}>
             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-[#4a4a68] text-sm')}>Forgot Password?</Text>
-            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#4a4a68] text-sm')}>Reset</Text>
+            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#4a4a68] text-sm')} onPress={() => navigation.navigate("Reset Password")}>Reset</Text>
           </View>
           <View style={tw`flex flex-row justify-center items-center`}>
             <CustomButton style={tw`bg-[#001c46] w-[326px] py-4 px-8 rounded-lg`}>

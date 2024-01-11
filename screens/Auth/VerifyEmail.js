@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native'
-import { useState } from 'react'
+// import { useState } from 'react'
 import tw from 'twrnc'
 import { Ionicons } from "@expo/vector-icons";
 // import OTPInputView from "@twotalltotems/react-native-otp-input";
@@ -9,15 +9,15 @@ import OTP from '../../components/OTP';
 
 const VerifyEmail = () => {
 
-  const [isFull, setIsFull] = useState(false);
+  // const [isFull, setIsFull] = useState(false);
 
-  const handleFull = () => {
-    if (isFull === 6) {
-      setIsFull(!isFull)
-    } else {
-      setIsFull(isFull)
-    }
-  }
+  // const handleFull = () => {
+  //   if (isFull === 6) {
+  //     setIsFull(!isFull)
+  //   } else {
+  //     setIsFull(isFull)
+  //   }
+  // }
 
   return (
     <View style={tw`flex justify-start items-center gap-48 h-full bg-[#f5f7ff] p-4`}>
