@@ -7,6 +7,8 @@ import {
     useClearByFocusCell,
 } from "react-native-confirmation-code-field";
 
+import tw from "twrnc";
+
 const CELL_COUNT = 6;
 
 const OTP = () => {
@@ -18,11 +20,11 @@ const OTP = () => {
         setValue,
     });
 
-    const handleFulfill = (code) => {
-        if (code.length === CELL_COUNT) {
-            setIsFull(true);
-        }
-    };
+    // const handleFulfill = (code) => {
+    //     if (code.length === CELL_COUNT) {
+    //         setIsFull(true);
+    //     }
+    // };
 
     return (
         <SafeAreaView style={styles.root}>
@@ -32,10 +34,10 @@ const OTP = () => {
                 value={value}
                 onChangeText={(code) => {
                     setValue(code);
-                    handleFulfill(code);
+                    // handleFulfill(code);
                 }}
                 cellCount={CELL_COUNT}
-                rootStyle={styles.codeFiledRoot}
+                rootStyle={tw`flex flex-row justify-evenly items-center gap-4`}
                 keyboardType="number-pad"
                 textContentType="oneTimeCode"
                 renderCell={({ index, symbol, isFocused }) => (
@@ -63,11 +65,6 @@ const OTP = () => {
 
 const styles = StyleSheet.create({
     root: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: 12,
         padding: 20,
         justifyContent: "center",
     },

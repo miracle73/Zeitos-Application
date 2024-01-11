@@ -38,22 +38,22 @@ const Login = () => {
   }, [navigation]);
 
   return (
-    <ScrollView>
+    <>
       <View style={tw`bg-[#f5f7ff] h-full p-4]`}>
         <View style={tw`flex justify-start items-start p-2`}>
-          <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'w-[272px] h-[76px] text-[#141414] text-3xl')}>Welcome 👋{"\n"} Login to your account</Text>
+          <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Welcome 👋{"\n"}Login to your account</Text>
           {/* <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Login to your account</Text> */}
         </View>
         <View style={tw`bg-white flex justify-center items-center gap-8 px-4 py-5 rounded-lg`}>
           <View style={tw`flex flex-col justify-center items-center gap-5`}>
             <View style={tw`w-[320px] flex flex-row justify-center items-center gap-5 bg-[#f5f7ff] rounded-lg px-5 py-5`}>
               <Ionicons name="logo-google" size={24} color={"#ff0000"} />
-              <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'w-[114px] text-base text-center text-[#4a4a68]')}>Login with google</Text>
+              <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-base text-center text-[#4a4a68]')}>Login with google</Text>
             </View>
-            <Text style={tw.style('w-[126px] text-sm text-[#898989] text-center')}>or create account with</Text>
+            <Text style={tw.style('text-sm text-[#898989] text-center')}>or create account with</Text>
           </View>
           <View style={tw`flex justify-center items-center gap-6`}>
-            <CustomInput placeholder="Enter email" value={email} type='email' onChangeText={(email) => setEmail(email)} style={tw`w-[326px] h-[52px] bg-[#f5f7ff] rounded-lg px-4`} />
+            <CustomInput placeholder="Enter email" value={email} type='email' onChangeText={(email) => setEmail(email)} style={tw`w-[326px] h-[52px] bg-[#f5f7ff] rounded-lg px-4 focus:invalid:border-red-200 invalid:text-red-200`} />
             <CustomInput placeholder="Enter password" value={password} type='password' onChangeText={(password) => setPassword(password)} secureTextEntry={!isVisible} style={tw`w-[326px] h-[52px] bg-[#f5f7ff] rounded-lg px-4`} />
             <Ionicons name={isVisible ? "eye" : "eye-off"} size={19} color={"#c4c4c4"} style={tw`absolute bottom-[35px] right-[25px]`} onPress={handleToggle} />
           </View>
@@ -68,7 +68,7 @@ const Login = () => {
           </View>
         </View>
       </View>
-    </ScrollView>
+    </>
   )
 }
 

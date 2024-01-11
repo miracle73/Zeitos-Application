@@ -1,14 +1,30 @@
-import { View, Text, ImageBackground, StatusBar } from 'react-native'
-import React from 'react'
+//import Libraries
+import { View, Text, ImageBackground, StatusBar } from 'react-native';
+import React, { useState } from 'react';
 import tw from "twrnc";
-import { useNavigation } from "@react-navigation/native"
+import { useNavigation } from "@react-navigation/native";
 
 //import components
 import CustomButton from '../components/CustomButton';
 
+// const slides = [
+//     {
+//         id: 1,
+//         title: 'Welcome',
+//         image: require("../assets/first-image.png")
+//     },
+//     {
+//         id: 1,
+//         title: 'Other Page',
+//         image: require("../assets/second-image.png")
+//     }
+// ]
+
 const Welcome = () => {
 
     const navigation = useNavigation();
+
+    // const [showHomePage, setShowHomePage] = useState
 
     return (
         <>
