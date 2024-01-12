@@ -61,7 +61,7 @@ const SignUp = () => {
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-black text-center')}>or Create Account with</Text>
                     </View>
                     <View style={tw`flex justify-center items-center gap-8`}>
-                        <View style={tw`flex flex-row justify-center items-center gap-6`}>
+                        <View style={tw`flex flex-row justify-center items-center gap-4`}>
                             <CustomInput placeholder="First Name" type="text" value={firstName} style={tw`w-[159px] h-[52px] bg-[#f5f7ff] rounded-lg px-4 ${firstName ? 'border-red-100' : 'border-[#f5f7ff]'}`} onChangeText={(firstName) => setFirstName(firstName)} />
                             <CustomInput placeholder="Last Name" type="text" value={lastName} style={tw`w-[159px] h-[52px] bg-[#f5f7ff] rounded-lg px-4`} onChangeText={(lastName) => setLastName(lastName)} />
                         </View>
@@ -73,7 +73,7 @@ const SignUp = () => {
 
                     <View style={tw`flex flex-row justify-center items-center`}>
                         <CustomButton style={tw`bg-[#001c46] rounded-lg py-4 px-8 w-[326px]`}>
-                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-white text-base text-center')}>Create Account</Text>
+                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-white text-base text-center')} onPress={() => navigation.navigate("Verify Email")}>Create Account</Text>
                         </CustomButton>
                     </View>
                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-center text-[#4a4a68]')}>By creating an you agree Ushift Privacy Policy and Terms of service</Text>
