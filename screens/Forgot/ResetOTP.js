@@ -1,26 +1,15 @@
 import { View, Text } from 'react-native'
-// import { useState } from 'react'
 import tw from 'twrnc'
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native"
-// import OTPInputView from "@twotalltotems/react-native-otp-input";
+
+//components
 import CustomButton from '../../components/CustomButton';
 import OTP from '../../components/OTP';
-// import "@react-native-community/clipboard"
 
 const ResetOTP = () => {
 
     const navigation = useNavigation();
-
-    // const [isFull, setIsFull] = useState(false);
-
-    // const handleFull = () => {
-    //   if (isFull === 6) {
-    //     setIsFull(!isFull)
-    //   } else {
-    //     setIsFull(isFull)
-    //   }
-    // }
 
     return (
         <View style={tw`flex justify-start items-center gap-48 h-full bg-[#f5f7ff] p-4`}>

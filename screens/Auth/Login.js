@@ -1,8 +1,9 @@
-import { Text, View, Pressable } from 'react-native';
+import { Text, View, Pressable, ScrollView, Alert } from 'react-native';
 import { useState, useEffect } from 'react';
 import tw from 'twrnc';
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
+import * as LocalAuthentication from 'expo-local-authentication';
 
 //import components
 import CustomInput from '../../components/CustomInput';
@@ -18,6 +19,50 @@ const Login = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleToggle = () => setIsVisible(!isVisible);
+
+  //biometrics 
+  const isSensorAvailableAsync = async () => {
+    try {
+      const available = await LocalAuthentication.hasHardwareAsync();
+      if (available) {
+        const biometryType = await LocalAuthentication.supportedAuthenticationTypesAsync();
+        console.log('Biometrics are supported:', biometryType);
+        return biometryType;
+      } else {
+        console.log('Biometrics are not supported.');
+        return false;
+      }
+    } catch (error) {
+      console.error(error);
+      return false;
+    }
+  };
+
+  //trigger biometrics
+  const authenticateAsync = async () => {
+    try {
+      const result = await LocalAuthentication.authenticateAsync();
+      if (result.success) {
+        console.log('Authentication successful!');
+        navigation.navigate("Home")
+      } else {
+        console.log('Authentication failed.');
+        Alert.alert("your hands may be sweaty")
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  //handle case when biometrics is available
+  const handleAuth = async () => {
+    const biometryType = await isSensorAvailableAsync();
+    if (biometryType) {
+      await authenticateAsync();
+    } else {
+      return null;
+    }
+  };
 
   useEffect(() => {
     navigation.setOptions({
@@ -38,7 +83,7 @@ const Login = () => {
   }, [navigation]);
 
   return (
-    <>
+    <ScrollView style={{ flex: 1 }}>
       <View style={tw`bg-[#f5f7ff] h-full p-4]`}>
         <View style={tw`flex justify-start items-start p-2`}>
           <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Welcome 👋{"\n"}Login to your account</Text>
@@ -63,12 +108,15 @@ const Login = () => {
           </View>
           <View style={tw`flex flex-row justify-center items-center`}>
             <CustomButton style={tw`bg-[#001c46] w-[326px] py-4 px-8 rounded-lg`}>
-              <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center text-white text-lg')}>Login</Text>
+              <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center text-white text-lg')} onPress={() => navigation.navigate("Home")}>Login</Text>
             </CustomButton>
           </View>
+          <Pressable onPress={handleAuth} style={tw`flex flex-row justify-center items-center p-2`}>
+            <Ionicons name="finger-print" size={40} color={"#001c46"} />
+          </Pressable>
         </View>
       </View>
-    </>
+    </ScrollView>
   )
 }
 

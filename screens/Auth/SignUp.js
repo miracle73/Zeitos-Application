@@ -61,7 +61,7 @@ const SignUp = () => {
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-black text-center')}>or Create Account with</Text>
                     </View>
                     <View style={tw`flex justify-center items-center gap-8`}>
-                        <View style={tw`flex flex-row justify-center items-center gap-6`}>
+                        <View style={tw`flex flex-row justify-center items-center gap-4`}>
                             <CustomInput placeholder="First Name" type="text" value={firstName} style={tw`w-[159px] h-[52px] bg-[#f5f7ff] rounded-lg px-4 ${firstName ? 'border-red-100' : 'border-[#f5f7ff]'}`} onChangeText={(firstName) => setFirstName(firstName)} />
                             <CustomInput placeholder="Last Name" type="text" value={lastName} style={tw`w-[159px] h-[52px] bg-[#f5f7ff] rounded-lg px-4`} onChangeText={(lastName) => setLastName(lastName)} />
                         </View>

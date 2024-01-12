@@ -5,11 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "extra": {
-      "android": {
-        "playServicesVersion": "current"
-      }
+    "userInterfaceStyle": "light"
     },
     "splash": {
       "image": "./assets/splash.png",
@@ -32,4 +28,3 @@
       "favicon": "./assets/favicon.png"
     }
   }
-}
