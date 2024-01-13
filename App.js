@@ -20,9 +20,10 @@ import ResetOTP from './screens/Forgot/ResetOTP';
 import CreateNewPassword from './screens/Forgot/CreateNewPassword';
 import ResetSuccess from './screens/Forgot/ResetSuccess';
 import OnBoarding from './screens/Auth/OnBoarding';
-import Home from './screens/ProfileScreens/Home';
+import Home from './screens/ProfileScreens/Home/Home';
 import File from "./screens/ProfileScreens/File";
 import Settings from "./screens/ProfileScreens/Settings";
+import Scenarios from './screens/ProfileScreens/Home/Scenarios';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -61,7 +62,8 @@ export default function App() {
           <Stack.Screen name="Reset OTP" component={ResetOTP} options={{ headerTitle: "", headerStyle: { backgroundColor: "#f5f7ff" } }} />
           <Stack.Screen name="New Password" component={CreateNewPassword} options={{ headerTitle: "", headerStyle: { backgroundColor: "#f5f7ff" } }} />
           <Stack.Screen name="Congratulations" component={ResetSuccess} options={{ headerTitle: "", headerStyle: { backgroundColor: "#fff" } }} />
-          <Stack.Screen name="Home" component={Account} options={{ headerShown: false }} />
+          <Stack.Screen name="Account" component={Account} options={{ headerShown: false }} />
+          <Stack.Screen name="Scenarios" component={Scenarios} options={{ headerTitle: "" }} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style='dark' />
@@ -82,7 +84,7 @@ export function Account() {
       <Tab.Screen name="Home" component={Home} options={{
         headerShown: false,
         tabBarIcon: () => (
-          <View style={tw`flex flex-row justify-center items-center gap-4 bg-[#001C46] rounded-full px-4 py-2`}>
+          <View style={tw`flex flex-row justify-center items-center gap-2 bg-[#001C46] rounded-full px-4 py-2`}>
             <Ionicons name="home" size={20} color={"#fff"} />
             <Text style={tw`text-base text-white`}>Home</Text>
           </View>
