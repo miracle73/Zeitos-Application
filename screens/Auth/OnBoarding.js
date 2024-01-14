@@ -21,17 +21,11 @@ const slides = [
         title: "Welcome to Unshift",
         subtitle: 'Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in. Aliquet pharetra volutpat mi egestas',
     },
-    {
-        id: '3',
-        image: require('../../assets/second-image.png'),
-        title: "Welcome to Unshift",
-        subtitle: 'Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in. Aliquet pharetra volutpat mi egestas',
-    },
 ];
 
 
 
-const OnBoarding = ({navigation}) => {
+const OnBoarding = ({ navigation }) => {
 
     // const navigation = useNavigate();
 
@@ -44,13 +38,13 @@ const OnBoarding = ({navigation}) => {
 
     const Slide = ({ item }) => {
         return (
-            <ImageBackground source={item.image} style={{ width, resizeMode: 'cover', flex: 1, justifyContent: "space-between" }} blurRadius={6}>
+            <ImageBackground source={item.image} style={{ width, resizeMode: 'cover', flex: 1, justifyContent: "space-between" }} blurRadius={2}>
                 <View style={{
                     height: height * 0.18,
                     width: 'auto',
-                    justifyContent: 'space-between',
+                    justifyContent: 'space-evenly',
                     paddingHorizontal: 20,
-                    paddingVertical: 20,
+                    paddingVertical: 40,
                     flexDirection: "row"
                 }}>{slides.map((_, index) => (
                     <View

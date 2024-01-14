@@ -37,7 +37,7 @@ const OTP = () => {
                     // handleFulfill(code);
                 }}
                 cellCount={CELL_COUNT}
-                rootStyle={tw`flex flex-row justify-evenly items-center gap-4`}
+                rootStyle={tw`flex flex-row justify-evenly items-center gap-2`}
                 keyboardType="number-pad"
                 textContentType="oneTimeCode"
                 renderCell={({ index, symbol, isFocused }) => (

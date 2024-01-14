@@ -69,7 +69,7 @@ const Login = () => {
       headerRight: () => {
         return (
           <Pressable
-            style={tw`bg-white rounded-lg m-2 pt-[11px] pb-[10px] pl-[16px] pr-[16px]`}
+            style={tw`bg-white rounded-lg m-2 p-[4%]`}
             onPress={() => navigation.navigate("Create Account")}
           >
             <Text
@@ -84,7 +84,7 @@ const Login = () => {
 
   return (
     <ScrollView style={{ flex: 1 }}>
-      <View style={tw`bg-[#f5f7ff] h-full p-4]`}>
+      <View style={tw`bg-[#f5f7ff] min-h-full p-4]`}>
         <View style={tw`flex justify-start items-start p-2`}>
           <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Welcome 👋{"\n"}Login to your account</Text>
           {/* <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Login to your account</Text> */}
@@ -108,7 +108,7 @@ const Login = () => {
           </View>
           <View style={tw`flex flex-row justify-center items-center`}>
             <CustomButton style={tw`bg-[#001c46] w-[326px] py-4 px-8 rounded-lg`}>
-              <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center text-white text-lg')} onPress={() => navigation.navigate("Home")}>Login</Text>
+              <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center text-white text-lg')} onPress={() => navigation.navigate("Account")}>Login</Text>
             </CustomButton>
           </View>
           <Pressable onPress={handleAuth} style={tw`flex flex-row justify-center items-center p-2`}>

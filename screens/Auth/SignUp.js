@@ -45,7 +45,7 @@ const SignUp = () => {
         <ScrollView>
             <View style={tw`gap-8 bg-[#F5F7FF] h-full p-4`}>
                 <View style={tw`flex flex-col justify-start items-start gap-6`}>
-                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'w-[135px] text-3xl text-[#141414]')}>
+                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'w-[40%] text-3xl text-[#141414]')}>
                         Create Account
                     </Text>
                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'w-[201px] text-sm text-[#8C8CA1]')}>

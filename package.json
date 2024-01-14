@@ -28,7 +28,8 @@
     "react-native-screens": "^3.29.0",
     "twrnc": "^3.6.7",
     "expo-constants": "~14.4.2",
-    "expo-blur": "~12.4.1"
+    "expo-blur": "~12.4.1",
+    "react-native-svg": "13.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
