@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, ScrollView } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView, StatusBar } from 'react-native';
 import React from 'react';
 import { Ionicons } from "@expo/vector-icons";
 import tw from 'twrnc';
