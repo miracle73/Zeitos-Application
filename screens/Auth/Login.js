@@ -83,13 +83,8 @@ const Login = () => {
   }, [navigation]);
 
   return (
-<<<<<<< HEAD
     <ScrollView style={tw`bg-[#f5f7ff] p-4]`}>
       <View style={{ flex: 1 }} >
-=======
-    <ScrollView style={tw`bg-[#f5f7ff] p-4`}>
-      <View style={tw`flex-1`}>
->>>>>>> 79d960236165a6ca776f17c1c4ce41f9212be6e0
         <View style={tw`flex justify-start items-start p-2`}>
           <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Welcome 👋{"\n"}Login to your account</Text>
           {/* <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Login to your account</Text> */}
