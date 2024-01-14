@@ -21,17 +21,11 @@ const slides = [
         title: "Welcome to Unshift",
         subtitle: 'Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in. Aliquet pharetra volutpat mi egestas',
     },
-    // {
-    //     id: '3',
-    //     image: require('../../assets/second-image.png'),
-    //     title: "Welcome to Unshift",
-    //     subtitle: 'Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in. Aliquet pharetra volutpat mi egestas',
-    // },
 ];
 
 
 
-const OnBoarding = ({navigation}) => {
+const OnBoarding = ({ navigation }) => {
 
     // const navigation = useNavigate();
 

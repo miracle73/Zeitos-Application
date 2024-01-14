@@ -36,7 +36,7 @@ const Home = () => {
                                     Aliquet pharetra
                                 </Text>
                                 <CustomButton style={tw`flex flex-row justify-center items-center px-3 py-3 rounded-full bg-[#001C46]`}>
-                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-center text-white')} onPress={() => navigation.navigate("Scenarios")}>Start Now</Text>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-center text-white')} onPress={() => navigation.navigate("Scenarios")}>Start Learning</Text>
                                 </CustomButton>
                             </View>
                         </View>
@@ -50,10 +50,13 @@ const Home = () => {
                                     Aliquet pharetra
                                 </Text>
                                 <CustomButton style={tw`flex flex-row justify-center items-center px-3 py-3 rounded-full bg-[#001C46]`}>
-                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-center text-white')}>Start Now</Text>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-center text-white')}>View Details</Text>
                                 </CustomButton>
                             </View>
                         </View>
+                    </View>
+                    <View style={tw`flex-1 justify-center items-center`}>
+                        <Image source={require("../../../assets/adSlide1.png")} style={tw`w-[342px]`} />
                     </View>
                 </View>
             </ScrollView>

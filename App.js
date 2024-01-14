@@ -8,7 +8,6 @@ import * as SplashScreen from 'expo-splash-screen';
 import { Ionicons } from "@expo/vector-icons";
 import tw from 'twrnc';
 import { View, Text, StyleSheet } from 'react-native';
-// import Constants from "expo-constants";
 import { BlurView } from 'expo-blur';
 
 //import components
@@ -23,7 +22,14 @@ import OnBoarding from './screens/Auth/OnBoarding';
 import Home from './screens/ProfileScreens/Home/Home';
 import File from "./screens/ProfileScreens/File";
 import Settings from "./screens/ProfileScreens/Settings";
-import Scenarios from './screens/ProfileScreens/Home/Scenarios';
+import Question2 from './screens/ProfileScreens/Home/Question2';
+import Question3 from './screens/ProfileScreens/Home/Question3';
+import Question from './screens/ProfileScreens/Home/Question';
+import AddQuestion from './screens/ProfileScreens/Home/AddQuestion';
+import AddQuestion3 from './screens/ProfileScreens/Home/AddQuestion3';
+import Question4 from './screens/ProfileScreens/Home/Question4';
+import AddQuestion4 from './screens/ProfileScreens/Home/AddQuestion4';
+import ScoreScreen from './screens/ProfileScreens/Home/ScoreScreen';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -63,10 +69,19 @@ export default function App() {
           <Stack.Screen name="New Password" component={CreateNewPassword} options={{ headerTitle: "", headerStyle: { backgroundColor: "#f5f7ff" } }} />
           <Stack.Screen name="Congratulations" component={ResetSuccess} options={{ headerTitle: "", headerStyle: { backgroundColor: "#fff" } }} />
           <Stack.Screen name="Account" component={Account} options={{ headerShown: false }} />
-          <Stack.Screen name="Scenarios" component={Scenarios} options={{ headerTitle: "" }} />
+          <Stack.Screen name="Scenarios" component={Question} options={{ headerShown: false }} />
+          <Stack.Screen name="AddQuestion1" component={AddQuestion} options={{ headerShown: false }} />
+          <Stack.Screen name="Question2" component={Question2} options={{ headerShown: false }} />
+          <Stack.Screen name="AddQuestion2" component={AddQuestion3} options={{ headerShown: false }} />
+          <Stack.Screen name="Question3" component={Question3} options={{ headerShown: false }} />
+          <Stack.Screen name="AddQuestion3" component={AddQuestion3} options={{ headerShown: false }} />
+          <Stack.Screen name="Question4" component={Question4} options={{ headerShown: false }} />
+          <Stack.Screen name="AddQuestion4" component={AddQuestion4} options={{ headerShown: false }} />
+          <Stack.Screen name="Scores" component={ScoreScreen} options={{ headerShown: false }} />
+
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar style='dark' />
+      <StatusBar style='dark' backgroundColor='#fff' />
     </>
   );
 }
