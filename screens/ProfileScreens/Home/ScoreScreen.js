@@ -1,7 +1,7 @@
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, SafeAreaView, Image } from 'react-native'
 import React from 'react'
 import tw from 'twrnc';
-import { Ionicons } from '@expo/vector-icons';
+// import { Ionicons } from '@expo/vector-icons';
 import Constants from "expo-constants";
 import { useNavigation } from "@react-navigation/native"
 
@@ -39,9 +39,9 @@ const ScoreScreen = () => {
                     </View>
                 </View>
                 <View style={tw`flex flex-row justify-end items-end p-4`}>
-                    <CustomButton style={tw`flex flex-row justify-between items-center gap-8 bg-[#001c46] rounded-lg px-4 py-4 ml-24`} onPress={() => navigation.navigate("Home")}>
+                    <CustomButton style={tw`flex flex-row justify-between items-center gap-8 bg-[#001c46] rounded-lg px-4 py-4 ml-24`} onPress={() => navigation.navigate("Account", {screen: "Answers"})}>
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-white text-lg')}>Go back home</Text>
-                        <Ionicons name="home" size={24} color={"#fff"} />
+                        <Image source={require("../../../assets/home-2.png")} />
                     </CustomButton>
                 </View>
             </View>

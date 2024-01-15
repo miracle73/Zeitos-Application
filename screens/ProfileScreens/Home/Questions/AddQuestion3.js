@@ -5,8 +5,10 @@ import tw from 'twrnc';
 import Svg, { Path } from 'react-native-svg';
 import { useNavigation } from "@react-navigation/native";
 import Constants from "expo-constants";
-import CustomInput from '../../../components/CustomInput';
-import CustomButton from '../../../components/CustomButton';
+
+//import components
+import CustomInput from '../../../../components/CustomInput';
+// import CustomButton from '../../../components/CustomButton';
 
 const AddQuestion3 = () => {
 
