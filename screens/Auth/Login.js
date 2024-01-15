@@ -44,7 +44,7 @@ const Login = () => {
       const result = await LocalAuthentication.authenticateAsync();
       if (result.success) {
         console.log('Authentication successful!');
-        navigation.navigate("Home")
+        navigation.navigate("Account")
       } else {
         console.log('Authentication failed.');
         Alert.alert("your hands may be sweaty")
@@ -69,11 +69,11 @@ const Login = () => {
       headerRight: () => {
         return (
           <Pressable
-            style={tw`bg-white rounded-lg m-2 p-[4%]`}
+            style={tw`bg-white rounded-lg m-2 p-2`}
             onPress={() => navigation.navigate("Create Account")}
           >
             <Text
-              style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-sm text-center w-[109px]')}>
+              style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-base text-center')}>
               Create Account
             </Text>
           </Pressable>
@@ -83,8 +83,8 @@ const Login = () => {
   }, [navigation]);
 
   return (
-    <ScrollView style={{ flex: 1 }}>
-      <View style={tw`bg-[#f5f7ff] min-h-full p-4]`}>
+    <ScrollView style={tw`bg-[#f5f7ff] p-4`}>
+      <View style={tw`flex-1`}>
         <View style={tw`flex justify-start items-start p-2`}>
           <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Welcome 👋{"\n"}Login to your account</Text>
           {/* <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Login to your account</Text> */}
