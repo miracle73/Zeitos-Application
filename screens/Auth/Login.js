@@ -69,7 +69,7 @@ const Login = () => {
       headerRight: () => {
         return (
           <Pressable
-            style={tw`bg-white rounded-lg m-2 pt-[11px] pb-[10px] pl-[16px] pr-[16px]`}
+            style={tw`bg-white rounded-lg m-2 p-[4%]`}
             onPress={() => navigation.navigate("Create Account")}
           >
             <Text

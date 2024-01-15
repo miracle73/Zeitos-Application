@@ -2,6 +2,7 @@
 import { View, Text, Image, SafeAreaView, ScrollView } from 'react-native';
 import React from 'react';
 import tw from "twrnc";
+import Constants from "expo-constants";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
@@ -12,9 +13,9 @@ const Home = () => {
     const navigation = useNavigation();
 
     return (
-        <SafeAreaView horizontal={false} style={{ flex: 1 }}>
-            <ScrollView style={{ flex: 1 }}>
-                <View style={tw`flex justify-center items-center gap-8 bg-[#f5f7ff] min-h-full p-4`}>
+        <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
+            <ScrollView vertical>
+                <View style={tw`flex justify-center items-center gap-8 bg-[#f5f7ff] h-full p-4`}>
                     <View style={tw`flex flex-row justify-between items-center gap-36`}>
                         <View style={tw`flex justify-start items-start gap-2`}>
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-base text-black')}>UShift</Text>

@@ -81,7 +81,7 @@ export default function App() {
 
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar style='dark' backgroundColor='#fff' />
+      <StatusBar style='dark'/>
     </>
   );
 }
