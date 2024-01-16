@@ -7,7 +7,7 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { Ionicons } from "@expo/vector-icons";
 import tw from 'twrnc';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { BlurView } from 'expo-blur';
 
 //import components
@@ -22,14 +22,15 @@ import OnBoarding from './screens/Auth/OnBoarding';
 import Home from './screens/ProfileScreens/Home/Home';
 import File from "./screens/ProfileScreens/File";
 import Settings from "./screens/ProfileScreens/Settings";
-import Question2 from './screens/ProfileScreens/Home/Question2';
-import Question3 from './screens/ProfileScreens/Home/Question3';
-import Question from './screens/ProfileScreens/Home/Question';
-import AddQuestion from './screens/ProfileScreens/Home/AddQuestion';
-import AddQuestion3 from './screens/ProfileScreens/Home/AddQuestion3';
-import Question4 from './screens/ProfileScreens/Home/Question4';
-import AddQuestion4 from './screens/ProfileScreens/Home/AddQuestion4';
+import Question2 from './screens/ProfileScreens/Home/Questions/Question2';
+import Question3 from './screens/ProfileScreens/Home/Questions/Question3';
+import Question from './screens/ProfileScreens/Home/Questions/Question';
+import AddQuestion from './screens/ProfileScreens/Home/Questions/AddQuestion';
+import AddQuestion3 from './screens/ProfileScreens/Home/Questions/AddQuestion3';
+import Question4 from './screens/ProfileScreens/Home/Questions/Question4';
+import AddQuestion4 from './screens/ProfileScreens/Home/Questions/AddQuestion4';
 import ScoreScreen from './screens/ProfileScreens/Home/ScoreScreen';
+import Answers from './screens/ProfileScreens/Home/AnswerScreens/Answers';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -78,29 +79,22 @@ export default function App() {
           <Stack.Screen name="Question4" component={Question4} options={{ headerShown: false }} />
           <Stack.Screen name="AddQuestion4" component={AddQuestion4} options={{ headerShown: false }} />
           <Stack.Screen name="Scores" component={ScoreScreen} options={{ headerShown: false }} />
-
+          <Stack.Screen name="Answers" component={Answers} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar style='dark'/>
+      <StatusBar style='dark' />
     </>
   );
 }
 
 export function Account() {
   return (
-    <Tab.Navigator
-      screenOptions={{
-        tabBarStyle: { position: 'absolute' },
-        tabBarBackground: () => (
-          <BlurView tint="light" intensity={100} style={StyleSheet.absoluteFill} />
-        ),
-      }}
-    >
+    <Tab.Navigator>
       <Tab.Screen name="Home" component={Home} options={{
         headerShown: false,
         tabBarIcon: () => (
           <View style={tw`flex flex-row justify-center items-center gap-2 bg-[#001C46] rounded-full px-4 py-2`}>
-            <Ionicons name="home" size={20} color={"#fff"} />
+            <Image source={require("./assets/home-2.png")} />
             <Text style={tw`text-base text-white`}>Home</Text>
           </View>
         ),
@@ -111,7 +105,7 @@ export function Account() {
         headerShown: false,
         tabBarIcon: () => (
           <View style={tw`flex flex-row justify-center items-center bg-[#001C46] rounded-full px-4 py-2`}>
-            <Ionicons name="document-outline" size={20} color={"#fff"} />
+            <Image source={require("./assets/notification.png")} />
           </View>
         ),
         tabBarLabel: ''
@@ -121,7 +115,7 @@ export function Account() {
         headerShown: false,
         tabBarIcon: () => (
           <View style={tw`flex flex-row justify-center items-center bg-[#001C46] rounded-full px-4 py-2`}>
-            <Ionicons name="settings-outline" size={20} color={"#fff"} />
+            <Image source={require("./assets/settings.png")} />
           </View>
         ),
         tabBarLabel: ''
