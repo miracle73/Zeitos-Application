@@ -89,7 +89,7 @@ export default function App() {
 
 export function Account() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{ tabBarStyle: { height: 80, backgroundColor: '#f5f7ff' } }}>
       <Tab.Screen name="Home" component={Home} options={{
         headerShown: false,
         tabBarIcon: () => (
@@ -98,7 +98,7 @@ export function Account() {
             <Text style={tw`text-base text-white`}>Home</Text>
           </View>
         ),
-        tabBarLabel: ''
+        tabBarLabel: '',
       }}
       />
       <Tab.Screen name="File" component={File} options={{

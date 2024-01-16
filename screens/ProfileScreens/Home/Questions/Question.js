@@ -35,8 +35,8 @@ const Question = () => {
                   <Svg xmlns="http://www.w3.org/2000/svg" width="344" height="114" viewBox="0 0 334 114" fill="none">
                     <Path d="M334 102C334 108.627 328.627 114 322 114H12C5.37259 114 0 108.627 0 102V81.3495V46.8641C0 40.2366 5.37259 34.8641 12 34.8641H32.9715C39.1022 34.8641 44.247 30.2429 44.9027 24.1474L46.3473 10.7167C47.003 4.62115 52.1478 0 58.2785 0H322C328.627 0 334 5.37258 334 12V102Z" fill="#141414" />
                     <View style={tw`flex flex-col justify-center items-center p-4`}>
-                      <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'pl-8 text-sm text-white')}>A co-worker starts spreading rumors</Text>
-                      <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-white')}>
+                      <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'pl-8 text-xs text-white')}>A co-worker starts spreading rumors</Text>
+                      <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-xs text-white')}>
                         about another team member, negatively impacting the work environment.
                         How would you handle this situation professionally?
                       </Text>
@@ -82,7 +82,7 @@ const Question = () => {
               </View>
             </View>
             <View style={tw`flex flex-row justify-between items-center gap-18 rounded-lg bg-white p-4`}>
-              <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-center')} onPress={() => navigation.navigate("AddQuestion")}>Save as a Draft</Text>
+              <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-center')} onPress={() => navigation.navigate("AddQuestion1")}>Save as a Draft</Text>
               <CustomButton style={tw`flex flex-row justify-between items-center bg-[#001c46] rounded-lg px-4 py-3`} onPress={() => navigation.navigate("Question2")}>
                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-base text-white')}>Next Scenario</Text>
                 <Ionicons name="chevron-forward" size={20} color={"#fff"} />

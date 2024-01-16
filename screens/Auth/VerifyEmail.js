@@ -13,7 +13,7 @@ const VerifyEmail = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={tw`flex justify-start items-center gap-48 h-full bg-[#f5f7ff] p-4`}>
+    <View style={tw`flex justify-start items-center gap-32 h-full bg-[#f5f7ff] p-4`}>
       <View style={tw`flex justify-start items-start gap-5`}>
         <View style={tw`flex justify-start items-start gap-2`}>
           <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-4xl')}>Verify{"\n"}your email</Text>
@@ -30,7 +30,7 @@ const VerifyEmail = () => {
         </View>
       </View>
       <View style={tw`flex flex-row justify-center items-center`}>
-        <CustomButton style={tw`bg-[#001c46] w-[326px] py-4 px-8 rounded-lg`} onPress={() => navigation.navigate("Home")}>
+        <CustomButton style={tw`bg-[#001c46] w-[326px] py-4 px-8 rounded-lg`} onPress={() => navigation.navigate("Reset OTP")}>
           <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center text-white text-lg')}>Create account</Text>
         </CustomButton>
       </View>
