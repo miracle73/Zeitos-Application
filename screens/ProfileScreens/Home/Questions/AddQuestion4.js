@@ -13,7 +13,6 @@ import CustomInput from '../../../../components/CustomInput';
 const AddQuestion4 = () => {
 
     const navigation = useNavigation();
- 
     return (
         <>
             <StatusBar style='dark' backgroundColor='#fff' />
