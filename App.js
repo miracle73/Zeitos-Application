@@ -79,7 +79,7 @@ export default function App() {
           <Stack.Screen name="Question4" component={Question4} options={{ headerShown: false }} />
           <Stack.Screen name="AddQuestion4" component={AddQuestion4} options={{ headerShown: false }} />
           <Stack.Screen name="Scores" component={ScoreScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="Answers" component={Answers} options={{ headerShown: false }} />
+          {/* <Stack.Screen name="Answers" component={Answers} options={{ headerShown: false }} /> */}
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style='dark' />

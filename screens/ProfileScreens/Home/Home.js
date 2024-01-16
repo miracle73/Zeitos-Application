@@ -9,16 +9,16 @@ import { useNavigation } from "@react-navigation/native";
 import CustomButton from '../../../components/CustomButton';
 
 
-const slides = [
-    {
-        id: '1',
-        image: require('../../../assets/adSlide1.png'),
-    },
-    {
-        id: '2',
-        image: require('../../../assets/adSlide1.png'),
-    },
-];
+// const slides = [
+//     {
+//         id: '1',
+//         image: require('../../../assets/adSlide1.png'),
+//     },
+//     {
+//         id: '2',
+//         image: require('../../../assets/adSlide1.png'),
+//     },
+// ];
 
 
 const Home = () => {
@@ -69,26 +69,9 @@ const Home = () => {
                                     </CustomButton>
                                 </View>
                             </View>
-                            {/* <View style={tw`flex flex-row justify-center items-start gap-6 bg-white rounded-lg p-4`}>
-                                <Image source={require("../../../assets/box.png")} />
-                                <View style={tw`flex flex-col justify-start items-start gap-4 w-3/5`}>
-                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-sm text-left text-black w-[168px]')}>Conferences & Seminars Workbooks</Text>
-                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1] text-left w-[196px]')}>
-                                        Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in.
-                                        Aliquet pharetra Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in.
-                                        Aliquet pharetra
-                                    </Text>
-                                    <CustomButton style={tw`flex flex-row justify-center items-center px-3 py-3 rounded-full bg-[#001C46]`}>
-                                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-center text-white')}>View Details</Text>
-                                    </CustomButton>
-                                </View>
-                            </View> */}
                         </View>
                     </View>
                 </ScrollView>
-                {/* <View style={tw`flex-1 justify-center items-center`}>
-                    <FlatList data={slides} />
-                </View> */}
             </SafeAreaView>
         </>
     )
