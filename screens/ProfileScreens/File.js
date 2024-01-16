@@ -16,7 +16,7 @@ const File = () => {
   const [buttonTwo, setButtonTwo] = useState(false);
 
   const handleButtonOne = () => {
-    setButtonOne(false);
+    setButtonTwo(false);
     setButtonOne(true);
   }
 
@@ -36,11 +36,11 @@ const File = () => {
           <View style={tw`flex flex-col justify-center items-start gap-6 p-4 w-full`}>
             <View style={tw`flex flex-col justify-start items-start gap-2 bg-white p-2 rounded-lg`}>
               <Ionicons name="chevron-back" size={24} color={"#141414"} onPress={() => navigation.goBack("Account")} />
-              <View style={tw`flex flex-row justify-between items-center bg-[#F5F7F9] p-2 rounded-lg`}>
+              <View style={tw`flex flex-row justify-between items-center bg-[#F5F7F9] py-4 px-2 rounded-lg`}>
                 <Pressable style={tw`w-[170px] h-[30px] justify-center rounded-lg ${buttonOne ? 'bg-white' : 'bg-[#F5F7F9]'}`} onPress={handleButtonOne}>
                   <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center')}>UShift Answers</Text>
                 </Pressable>
-                <Pressable style={tw`w-[170px] h-[30px] justify-center rounded-lg ${buttonTwo ? 'bg-[#F5F7F9]' : 'bg-white'}`} onPress={handleButtonTwo}>
+                <Pressable style={tw`w-[170px] h-[30px] justify-center rounded-lg ${buttonTwo ? 'bg-white' : 'bg-[#F5F7F9]'}`} onPress={handleButtonTwo}>
                   <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center')}>My Answers</Text>
                 </Pressable>
               </View>
