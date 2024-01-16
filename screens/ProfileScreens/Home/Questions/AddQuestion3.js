@@ -30,18 +30,20 @@ const AddQuestion3 = () => {
                             </View>
                         </View>
                         <View style={tw`flex justify-center items-start bg-white rounded-lg h-[230px] w-[100%] p-2`}>
-                            <View style={tw`flex flex-row justify-start items-start gap-2`}>
-                                <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-base text-white rounded-lg bg-[#141414] text-center px-4')}>1</Text>
-                                <Svg xmlns="http://www.w3.org/2000/svg" width="300" height="114" viewBox="0 0 334 114" fill="none">
-                                    <Path d="M334 102C334 108.627 328.627 114 322 114H12C5.37259 114 0 108.627 0 102V81.3495V46.8641C0 40.2366 5.37259 34.8641 12 34.8641H32.9715C39.1022 34.8641 44.247 30.2429 44.9027 24.1474L46.3473 10.7167C47.003 4.62115 52.1478 0 58.2785 0H322C328.627 0 334 5.37258 334 12V102Z" fill="#141414" />
-                                    <View style={tw`flex justify-center items-center`}>
-                                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-center text-white')}>A co-worker starts spreading rumors</Text>
-                                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-center text-white')}>
-                                            about another team member, negatively impacting the work environment.
-                                            How would you handle this situation professionally?
-                                        </Text>
-                                    </View>
-                                </Svg>
+                            <View>
+                                <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-base text-white rounded-lg bg-[#E77D1C] text-center px-4 absolute top-[6px] left-[10px]')}>1</Text>
+                                <View style={tw`absolute top-[2px] left-[5px]`}>
+                                    <Svg xmlns="http://www.w3.org/2000/svg" width="344" height="114" viewBox="0 0 334 114" fill="none">
+                                        <Path d="M334 102C334 108.627 328.627 114 322 114H12C5.37259 114 0 108.627 0 102V81.3495V46.8641C0 40.2366 5.37259 34.8641 12 34.8641H32.9715C39.1022 34.8641 44.247 30.2429 44.9027 24.1474L46.3473 10.7167C47.003 4.62115 52.1478 0 58.2785 0H322C328.627 0 334 5.37258 334 12V102Z" fill="#E77D1C" />
+                                        <View style={tw`flex flex-col justify-center items-center p-4`}>
+                                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'pl-8 text-xs text-white')}>A co-worker starts spreading rumors</Text>
+                                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-xs text-white')}>
+                                                about another team member, negatively impacting the work environment.
+                                                How would you handle this situation professionally?
+                                            </Text>
+                                        </View>
+                                    </Svg>
+                                </View>
                             </View>
                             <View style={tw`flex flex-row justify-start items-center gap-2`}>
                                 <Text style={tw`text-[#141414] text-lg`}>.</Text>

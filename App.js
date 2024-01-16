@@ -79,7 +79,7 @@ export default function App() {
           <Stack.Screen name="Question4" component={Question4} options={{ headerShown: false }} />
           <Stack.Screen name="AddQuestion4" component={AddQuestion4} options={{ headerShown: false }} />
           <Stack.Screen name="Scores" component={ScoreScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="Answers" component={Answers} options={{ headerShown: false }} />
+          {/* <Stack.Screen name="Answers" component={Answers} options={{ headerShown: false }} /> */}
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style='dark' />
@@ -89,7 +89,7 @@ export default function App() {
 
 export function Account() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{ tabBarStyle: { height: 80, backgroundColor: '#f5f7ff' } }}>
       <Tab.Screen name="Home" component={Home} options={{
         headerShown: false,
         tabBarIcon: () => (
@@ -98,7 +98,7 @@ export function Account() {
             <Text style={tw`text-base text-white`}>Home</Text>
           </View>
         ),
-        tabBarLabel: ''
+        tabBarLabel: '',
       }}
       />
       <Tab.Screen name="File" component={File} options={{

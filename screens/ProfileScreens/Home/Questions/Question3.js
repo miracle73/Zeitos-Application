@@ -29,15 +29,15 @@ const Question3 = () => {
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#4A4A68]')}>Read scenario and provide responses in the fields below</Text>
                             </View>
                         </View>
-                        <View style={tw`flex justify-center items-start bg-white gap-12 rounded-lg h-[230px] w-[100%] p-2`}>
+                        <View style={tw`flex justify-center items-start gap-12 bg-white gap-12 rounded-lg h-[230px] w-[100%] p-2`}>
                             <View>
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-base text-white rounded-lg bg-[#E77D1C] text-center px-4 absolute top-[6px] left-[10px]')}>3</Text>
                                 <View style={tw`absolute top-[2px] left-[5px]`}>
                                     <Svg xmlns="http://www.w3.org/2000/svg" width="344" height="114" viewBox="0 0 334 114" fill="none">
                                         <Path d="M334 102C334 108.627 328.627 114 322 114H12C5.37259 114 0 108.627 0 102V81.3495V46.8641C0 40.2366 5.37259 34.8641 12 34.8641H32.9715C39.1022 34.8641 44.247 30.2429 44.9027 24.1474L46.3473 10.7167C47.003 4.62115 52.1478 0 58.2785 0H322C328.627 0 334 5.37258 334 12V102Z" fill="#E77D1C" />
                                         <View style={tw`flex flex-col justify-center items-center p-4`}>
-                                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'pl-8 text-sm text-white')}>A manager asks you to carry out a task</Text>
-                                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-white')}>
+                                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'pl-8 text-xs text-white')}>A manager asks you to carry out a task</Text>
+                                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-xs text-white')}>
                                                 but you are currently busy attending to other things. How would you handle the situation professionally?
                                             </Text>
                                         </View>
