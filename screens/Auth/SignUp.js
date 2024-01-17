@@ -58,7 +58,7 @@ const SignUp = () => {
                             <Ionicons name="logo-google" size={24} color="#ff0000" />
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-black text-base text-center')}>Create Account with Google</Text>
                         </View>
-                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-black text-center')}>or Create Account with</Text>
+                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-black text-center')}>or create account with</Text>
                     </View>
                     <View style={tw`flex justify-center items-center gap-8`}>
                         <View style={tw`flex flex-row justify-center items-center gap-4`}>

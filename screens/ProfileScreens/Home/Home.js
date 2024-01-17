@@ -1,56 +1,19 @@
 //Libraries
 import { View, Text, Image, SafeAreaView, ScrollView, Animated, StyleSheet, Dimensions } from 'react-native';
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import tw from "twrnc";
 import Constants from "expo-constants";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-// import RNAnimatedScrollIndicators from 'react-native-animated-scroll-indicators';
+import RNAnimatedScrollIndicators from 'react-native-animated-scroll-indicators';
 
 //import components
 import CustomButton from '../../../components/CustomButton';
 
-
-// const slides = [
-//     {
-//         id: '1',
-//         image: require('../../../assets/adSlide1.png'),
-//     },
-//     {
-//         id: '2',
-//         image: require('../../../assets/adSlide1.png'),
-//     },
-// ];
-
-
 const Home = () => {
-    // const { width, height } = Dimensions.get("window");
+    scrollX = new Animated.Value(0);
+    const { width, height } = Dimensions.get("window");
 
-
-    // const [activeDotIndex, setActiveDotIndex] = useState(0);
-    // const scrollX = useRef(new Animated.Value(0)).current;
-
-    // const renderDots = () => {
-    //     return (
-    //         <View style={styles.dotsContainer}>
-    //             {Array(3).fill().map((_, i) => (
-    //                 <Animated.View
-    //                     key={i}
-    //                     style={[
-    //                         styles.dot,
-    //                         {
-    //                             opacity: scrollX.interpolate({
-    //                                 inputRange: [i * width, (i + 1) * width],
-    //                                 outputRange: [1, 0.3],
-    //                                 extrapolate: 'clamp',
-    //                             }),
-    //                         },
-    //                     ]}
-    //                 />
-    //             ))}
-    //         </View>
-    //     );
-    // };
 
     const navigation = useNavigation();
 
@@ -80,38 +43,70 @@ const Home = () => {
                                         Aliquet pharetra Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in.
                                         Aliquet pharetra
                                     </Text>
-                                    <CustomButton style={tw`flex flex-row justify-center items-center px-3 py-3 rounded-full bg-white`}>
+                                    <CustomButton style={tw`flex flex-row justify-center items-center px-6 py-3 rounded-full bg-white`}>
                                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-sm text-center text-[#001C46]')} onPress={() => navigation.navigate("Scenarios")}>Start Learning</Text>
                                     </CustomButton>
                                 </View>
                             </View>
                             <View style={tw`flex flex-row justify-center items-start gap-6 bg-white rounded-lg p-4`}>
-                                <Image source={require("../../../assets/people2.png")} />
+                                <Image source={require("../../../assets/home-image2.png")} />
                                 <View style={tw`flex flex-col justify-start items-start gap-4 w-3/5`}>
-                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-sm text-left text-black w-[168px]')}>Conferences & Seminars Workbooks</Text>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-sm text-left text-black w-[168px]')}>Workshops and Workbooks</Text>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1] text-left w-[196px]')}>
                                         Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in.
                                         Aliquet pharetra Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in.
                                         Aliquet pharetra
                                     </Text>
-                                    <CustomButton style={tw`flex flex-row justify-center items-center px-3 py-3 rounded-full bg-[#001C46]`}>
+                                    <CustomButton style={tw`flex flex-row justify-center items-center px-6 py-3 rounded-full bg-[#001C46]`}>
                                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-center text-white')}>View Details</Text>
                                     </CustomButton>
                                 </View>
                             </View>
                         </View>
-
-                        <ScrollView horizontal showsHorizontalScrollIndicator={false} >
-                            <Image source={require("../../../assets/adSlide1.png")} />
-                            <Image source={require("../../../assets/adSlide1.png")} />
-                        </ScrollView>
-                        {/* {renderDots()} */}
-                        {/* <RNAnimatedScrollIndicators
-                            dotStyle={{ backgroundColor: 'gray', activeBackgroundColor: 'blue' }}
-                            dotsLength={2} // Number of dots
-                            containerStyle={{ marginTop: 10 }}
-                        /> */}
-
+                        <View style={{ flex: 1 }}>
+                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001C46] text-lg p-2')}>Upcoming Workshops:</Text>
+                            <Animated.ScrollView
+                                horizontal
+                                pagingEnabled
+                                showsHorizontalScrollIndicator={false}
+                                contentContainerStyle={{ flexGrow: 1, gap: 30 }}
+                                onScroll={Animated.event(
+                                    [{ nativeEvent: { contentOffset: { x: this.scrollX } } }],
+                                    { useNativeDriver: true })}
+                            >
+                                <View style={tw`flex justify-start items-start gap-2`}>
+                                    <Image source={require("../../../assets/ad1.png")} />
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001C46] text-lg w-[155px]')}>Dev Related Tech Summit</Text>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1] w-[158px]')}>Lorem ipsum dolor sit amet cons Enim rhoncus ultrices</Text>
+                                </View>
+                                <View style={tw`flex justify-start items-start gap-2`}>
+                                    <Image source={require("../../../assets/ad2.png")} />
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001C46] text-lg')}>Business seminar</Text>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1] w-[158px]')}>Lorem ipsum dolor sit amet cons Enim rhoncus ultrices</Text>
+                                </View>
+                                <View style={tw`flex justify-start items-start gap-2`}>
+                                    <Image source={require("../../../assets/ad2.png")} />
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001C46] text-lg')}>Business seminar</Text>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1] w-[158px]')}>Lorem ipsum dolor sit amet cons Enim rhoncus ultrices</Text>
+                                </View>
+                            </Animated.ScrollView>
+                            <View style={{
+                                left: 0,
+                                right: 0,
+                                top: 350,
+                                zIndex: 100,
+                                marginBottom: 20,
+                                position: 'absolute'
+                            }}>
+                                <RNAnimatedScrollIndicators
+                                    numberOfCards={3}
+                                    scrollWidth={width}
+                                    activeColor={'#001C46'}
+                                    inActiveColor={'#8C8CA1'}
+                                    scrollAnimatedValue={this.scrollX}
+                                />
+                            </View>
+                        </View>
                     </View>
                 </ScrollView>
             </SafeAreaView>

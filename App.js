@@ -5,10 +5,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import { Ionicons } from "@expo/vector-icons";
+// import { Ionicons } from "@expo/vector-icons";
 import tw from 'twrnc';
 import { View, Text, Image } from 'react-native';
-import { BlurView } from 'expo-blur';
+// import { BlurView } from 'expo-blur';
 
 //import components
 import SignUp from './screens/Auth/SignUp';
@@ -30,7 +30,8 @@ import AddQuestion3 from './screens/ProfileScreens/Home/Questions/AddQuestion3';
 import Question4 from './screens/ProfileScreens/Home/Questions/Question4';
 import AddQuestion4 from './screens/ProfileScreens/Home/Questions/AddQuestion4';
 import ScoreScreen from './screens/ProfileScreens/Home/ScoreScreen';
-import Answers from './screens/ProfileScreens/Home/AnswerScreens/Answers';
+// import Answers from './screens/ProfileScreens/Home/AnswerScreens/Answers';
+import AddQuestion2 from './screens/ProfileScreens/Home/Questions/AddQuestion2';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -73,7 +74,7 @@ export default function App() {
           <Stack.Screen name="Scenarios" component={Question} options={{ headerShown: false }} />
           <Stack.Screen name="AddQuestion1" component={AddQuestion} options={{ headerShown: false }} />
           <Stack.Screen name="Question2" component={Question2} options={{ headerShown: false }} />
-          <Stack.Screen name="AddQuestion2" component={AddQuestion3} options={{ headerShown: false }} />
+          <Stack.Screen name="AddQuestion2" component={AddQuestion2} options={{ headerShown: false }} />
           <Stack.Screen name="Question3" component={Question3} options={{ headerShown: false }} />
           <Stack.Screen name="AddQuestion3" component={AddQuestion3} options={{ headerShown: false }} />
           <Stack.Screen name="Question4" component={Question4} options={{ headerShown: false }} />
