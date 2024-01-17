@@ -81,7 +81,7 @@ const SignUp = () => {
 
                 <View style={tw`flex flex-row justify-around items-center`}>
                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8c8ca1]')}>Have an account?</Text>
-                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center text-sm bg-white w-[79px] py-2 text-[#001c46] rounded-lg')}> Login</Text>
+                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center text-sm bg-white w-[79px] py-2 text-[#001c46] rounded-lg')} onPress={() => navigation.navigate("Login")}> Login</Text>
                 </View>
             </View>
         </ScrollView>

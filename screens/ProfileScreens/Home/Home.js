@@ -1,10 +1,11 @@
 //Libraries
-import { View, Text, Image, SafeAreaView, ScrollView } from 'react-native';
-import React from 'react';
+import { View, Text, Image, SafeAreaView, ScrollView, Animated, StyleSheet, Dimensions } from 'react-native';
+import React, { useState, useRef } from 'react';
 import tw from "twrnc";
 import Constants from "expo-constants";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+// import RNAnimatedScrollIndicators from 'react-native-animated-scroll-indicators';
 
 //import components
 import CustomButton from '../../../components/CustomButton';
@@ -23,6 +24,33 @@ import CustomButton from '../../../components/CustomButton';
 
 
 const Home = () => {
+    // const { width, height } = Dimensions.get("window");
+
+
+    // const [activeDotIndex, setActiveDotIndex] = useState(0);
+    // const scrollX = useRef(new Animated.Value(0)).current;
+
+    // const renderDots = () => {
+    //     return (
+    //         <View style={styles.dotsContainer}>
+    //             {Array(3).fill().map((_, i) => (
+    //                 <Animated.View
+    //                     key={i}
+    //                     style={[
+    //                         styles.dot,
+    //                         {
+    //                             opacity: scrollX.interpolate({
+    //                                 inputRange: [i * width, (i + 1) * width],
+    //                                 outputRange: [1, 0.3],
+    //                                 extrapolate: 'clamp',
+    //                             }),
+    //                         },
+    //                     ]}
+    //                 />
+    //             ))}
+    //         </View>
+    //     );
+    // };
 
     const navigation = useNavigation();
 
@@ -30,8 +58,8 @@ const Home = () => {
         <>
             <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
                 <ScrollView vertical style={tw`pb-80`}>
-                    <View style={tw`flex justify-center items-center gap-8 bg-[#f5f7ff] h-full p-4 pb-60`}>
-                        <Ionicons name="chevron-back" size={24} color={"#141414"} onPress={() => navigation.navigate("Login")}/>
+                    <View style={tw`flex justify-center items-start gap-8 bg-[#f5f7ff] h-full p-4 pb-20`}>
+                        <Ionicons name="chevron-back" size={24} color={"#141414"} onPress={() => navigation.navigate("Login")} />
                         <View style={tw`flex flex-row justify-between items-center gap-36`}>
                             <View style={tw`flex justify-start items-start gap-2`}>
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-base text-black')}>UShift</Text>
@@ -72,10 +100,18 @@ const Home = () => {
                                 </View>
                             </View>
                         </View>
-                        <ScrollView horizontal style={tw``}>
+
+                        <ScrollView horizontal showsHorizontalScrollIndicator={false} >
                             <Image source={require("../../../assets/adSlide1.png")} />
                             <Image source={require("../../../assets/adSlide1.png")} />
                         </ScrollView>
+                        {/* {renderDots()} */}
+                        {/* <RNAnimatedScrollIndicators
+                            dotStyle={{ backgroundColor: 'gray', activeBackgroundColor: 'blue' }}
+                            dotsLength={2} // Number of dots
+                            containerStyle={{ marginTop: 10 }}
+                        /> */}
+
                     </View>
                 </ScrollView>
             </SafeAreaView>
@@ -83,4 +119,6 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;
+
+const styles = StyleSheet.create({})
