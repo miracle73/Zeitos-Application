@@ -19,7 +19,7 @@ const AddQuestion2 = () => {
       <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
         <ScrollView vertical>
           <View style={tw`flex justify-start items-start bg-[#f5f7ff] gap-4 h-full`}>
-            <View style={tw`flex justify-start items-start gap-4 bg-white w-full`}>
+            <View style={tw`flex justify-start items-start gap-4 bg-white w-full p-4`}>
               <View>
                 <Ionicons name="chevron-back-outline" size={24} color={"#141414"} onPress={() => navigation.goBack("Question2")} />
               </View>
@@ -34,7 +34,7 @@ const AddQuestion2 = () => {
                   <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-base text-white rounded-lg bg-[#3E8E7B] text-center px-4 absolute top-[6px] left-[10px]')}>2</Text>
                   <View style={tw`absolute top-[2px] left-[5px]`}>
                     <Svg xmlns="http://www.w3.org/2000/svg" width="344" height="114" viewBox="0 0 334 114" fill="none">
-                      <Path d="M334 102C334 108.627 328.627 114 322 114H12C5.37259 114 0 108.627 0 102V81.3495V46.8641C0 40.2366 5.37259 34.8641 12 34.8641H32.9715C39.1022 34.8641 44.247 30.2429 44.9027 24.1474L46.3473 10.7167C47.003 4.62115 52.1478 0 58.2785 0H322C328.627 0 334 5.37258 334 12V102Z" fill="#3EBE7B" />
+                      <Path d="M334 102C334 108.627 328.627 114 322 114H12C5.37259 114 0 108.627 0 102V81.3495V46.8641C0 40.2366 5.37259 34.8641 12 34.8641H32.9715C39.1022 34.8641 44.247 30.2429 44.9027 24.1474L46.3473 10.7167C47.003 4.62115 52.1478 0 58.2785 0H322C328.627 0 334 5.37258 334 12V102Z" fill="#3E8E7B" />
                       <View style={tw`flex flex-col justify-center items-center p-4`}>
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'pl-8 text-xs text-white')}>A customer asks for assistance in finding</Text>
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-xs text-white pl-4')}>
