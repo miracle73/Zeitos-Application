@@ -21,7 +21,7 @@ const Question = () => {
           <View style={tw`flex justify-start items-start bg-[#f5f7ff] gap-4 h-full`}>
             <View style={tw`flex justify-start items-start gap-4 bg-white w-full p-4`}>
               <View>
-                <Ionicons name="chevron-back-outline" size={24} color={"#141414"} onPress={() => navigation.goBack("Home")} />
+                <Ionicons name="chevron-back-outline" size={24} color={"#141414"} onPress={() => navigation.goBack("Scenarios")} />
               </View>
               <View style={tw`flex justify-start items-start gap-2`}>
                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-3xl text-[#141414]')}>Scenarios</Text>
@@ -45,16 +45,16 @@ const Question = () => {
                     </Svg>
                   </View>
                 </View>
-                <View style={tw`mt-18 flex justify-center items-center`}>
-                  <View style={tw`flex flex-row justify-center items-center gap-2`}>
+                <View style={tw`mt-18 flex justify-center items-start pb-4`}>
+                  <View style={tw`flex flex-row justify-center items-start gap-2`}>
                     <Text style={tw`text-[#141414] text-3xl`}>.</Text>
                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-[#4A4A68] text-sm pt-4')}>Who are the role players involved?</Text>
                   </View>
-                  <View style={tw`flex flex-row justify-center items-center gap-2`}>
-                    <Text style={tw`text-[#141414] text-3xl pl-4`}>.</Text>
+                  <View style={tw`flex flex-row justify-center items-start gap-2`}>
+                    <Text style={tw`text-[#141414] text-3xl`}>.</Text>
                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-[#4A4A68] text-sm pt-4')}>What professionalism tips is/are required?</Text>
                   </View>
-                  <View style={tw`flex flex-row justify-center items-center gap-2`}>
+                  <View style={tw`flex flex-row justify-center items-start gap-2`}>
                     <Text style={tw`text-[#141414] text-3xl`}>.</Text>
                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-[#4A4A68] text-sm pt-4')}>How would you resolve the situation?</Text>
                   </View>
@@ -78,7 +78,7 @@ const Question = () => {
                 </View>
                 <CustomInput multiline={true} placeholder="Write solution here" placeholderText={"#8c8ca1"} style={tw`border-2 border-[#F5F7F9] bg-[#F5F7F9]  w-[326px] h-[107px] p-2.5 m-2.5 rounded-lg`} />
               </View>
-              <View style={tw`flex flex-row justify-between items-center gap-18 rounded-lg bg-white p-4`}>
+              <View style={tw`flex flex-row justify-between items-center gap-12 rounded-lg bg-white p-2`}>
                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-center')} onPress={() => navigation.navigate("AddQuestion1")}>Save as a Draft</Text>
                 <CustomButton style={tw`flex flex-row justify-between items-center bg-[#001c46] rounded-lg px-4 py-3`} onPress={() => navigation.navigate("Question2")}>
                   <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-base text-white')}>Next Scenario</Text>

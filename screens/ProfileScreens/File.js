@@ -42,12 +42,12 @@ const File = () => {
     <>
       <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
         <ScrollView vertical>
-          <View style={tw`flex justify-start items-start gap-6 h-full`}>
+          <View style={tw`flex justify-start items-start gap-6 bg-[#F5F7F9] h-full`}>
             <View style={tw`flex justify-start items-start gap-2 bg-white w-full p-4`}>
               <View>
                 <Ionicons name="chevron-back" size={24} color={"#141414"} onPress={() => navigation.goBack("Account")} />
               </View>
-              <View style={tw`flex flex-row justify-between items-center bg-[#F5F7F9] py-4 px-2 rounded-lg`}>
+              <View style={tw`flex flex-row justify-between items-center bg-[#F5F7F9] h-[49px] rounded-lg m-auto`}>
                 <Pressable style={tw`w-[170px] h-[30px] justify-center rounded-lg ${buttonOne ? 'bg-white' : 'bg-[#F5F7F9]'}`} onPress={handleButtonOne}>
                   <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center')}>UShift Answers</Text>
                 </Pressable>
@@ -56,7 +56,7 @@ const File = () => {
                 </Pressable>
               </View>
             </View>
-            <View style={tw`flex justify-center items-start gap-6`}>
+            <View style={tw`flex justify-center items-start gap-6 m-2`}>
               {buttonOne ? data.ushift : data.myanswers}
             </View>
           </View>

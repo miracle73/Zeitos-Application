@@ -89,17 +89,32 @@ const Home = () => {
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001C46] text-lg')}>Business seminar</Text>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1] w-[158px]')}>Lorem ipsum dolor sit amet cons Enim rhoncus ultrices</Text>
                                 </View>
+                                <View style={tw`flex justify-start items-start gap-2`}>
+                                    <Image source={require("../../../assets/ad2.png")} />
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001C46] text-lg')}>Business seminar</Text>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1] w-[158px]')}>Lorem ipsum dolor sit amet cons Enim rhoncus ultrices</Text>
+                                </View>
+                                <View style={tw`flex justify-start items-start gap-2`}>
+                                    <Image source={require("../../../assets/ad2.png")} />
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001C46] text-lg')}>Business seminar</Text>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1] w-[158px]')}>Lorem ipsum dolor sit amet cons Enim rhoncus ultrices</Text>
+                                </View>
+                                <View style={tw`flex justify-start items-start gap-2`}>
+                                    <Image source={require("../../../assets/ad2.png")} />
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001C46] text-lg')}>Business seminar</Text>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1] w-[158px]')}>Lorem ipsum dolor sit amet cons Enim rhoncus ultrices</Text>
+                                </View>
                             </Animated.ScrollView>
                             <View style={{
                                 left: 0,
                                 right: 0,
-                                top: 350,
+                                top: 320,
                                 zIndex: 100,
                                 marginBottom: 20,
                                 position: 'absolute'
                             }}>
                                 <RNAnimatedScrollIndicators
-                                    numberOfCards={3}
+                                    numberOfCards={6}
                                     scrollWidth={width}
                                     activeColor={'#001C46'}
                                     inActiveColor={'#8C8CA1'}

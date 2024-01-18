@@ -16,12 +16,12 @@ const MyAnswers = () => {
                 <ScrollView vertical>
 
 
-                    <View style={tw`flex justify-center items-start gap-6 p-4`}>
+                    <View style={tw`flex justify-center items-start gap-6 h-full`}>
                         <View>
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Answered Scenario</Text>
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#4A4A68] text-sm')}>Read answers below</Text>
                         </View>
-                        <View style={tw`flex justify-center items-start bg-white gap-12 rounded-lg h-[230px] w-[358px] py-12`}>
+                        <View style={tw`flex justify-center items-start bg-white gap-12 rounded-lg h-[230px] w-[358px] py-12 px-1.5`}>
                             <View>
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-base text-white rounded-lg bg-[#141414] text-center px-4 absolute top-[6px] left-[10px]')}>1</Text>
                                 <View style={tw`absolute top-[2px] left-[5px]`}>
@@ -37,16 +37,16 @@ const MyAnswers = () => {
                                     </Svg>
                                 </View>
                             </View>
-                            <View style={tw`mt-18 flex justify-center items-center`}>
-                                <View style={tw`flex flex-row justify-center items-center gap-2`}>
+                            <View style={tw`mt-18 flex justify-center items-start pb-4`}>
+                                <View style={tw`flex flex-row justify-center items-start gap-2`}>
                                     <Text style={tw`text-[#141414] text-3xl`}>.</Text>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-[#4A4A68] text-sm pt-4')}>Who are the role players involved?</Text>
                                 </View>
-                                <View style={tw`flex flex-row justify-center items-center gap-2`}>
-                                    <Text style={tw`text-[#141414] text-3xl pl-4`}>.</Text>
+                                <View style={tw`flex flex-row justify-center items-start gap-2`}>
+                                    <Text style={tw`text-[#141414] text-3xl`}>.</Text>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-[#4A4A68] text-sm pt-4')}>What professionalism tips is/are required?</Text>
                                 </View>
-                                <View style={tw`flex flex-row justify-center items-center gap-2`}>
+                                <View style={tw`flex flex-row justify-center items-start gap-2`}>
                                     <Text style={tw`text-[#141414] text-3xl`}>.</Text>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-[#4A4A68] text-sm pt-4')}>How would you resolve the situation?</Text>
                                 </View>
