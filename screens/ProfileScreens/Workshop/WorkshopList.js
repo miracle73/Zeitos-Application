@@ -12,7 +12,7 @@ const WorkshopList = () => {
                 <View style={tw`flex justify-start items-start gap-6 h-full bg-[#F5F7FF]`}>
                     <View style={tw`flex justify-start items-start gap-4 bg-white w-full p-4`}>
                         <View>
-                            <Ionicons name="chevron-back-outline" size={24} color={"#141414"} onPress={() => navigation.goBack("Home")} />
+                            <Ionicons name="chevron-back-outline" size={24} color={"#141414"} onPress={() => navigation.goBack("Home")} /> 
                         </View>
                         <View style={tw`flex justify-start items-start gap-2`}>
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, ' w-[255px] text-3xl text-[#141414]')}>Workshops and Seminars</Text>
@@ -25,4 +25,4 @@ const WorkshopList = () => {
     )
 }
 
-export default WorkshopList
+export default WorkshopList;
