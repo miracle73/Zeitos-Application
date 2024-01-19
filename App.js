@@ -32,6 +32,7 @@ import AddQuestion4 from './screens/ProfileScreens/Home/Questions/AddQuestion4';
 import ScoreScreen from './screens/ProfileScreens/Home/ScoreScreen';
 // import Answers from './screens/ProfileScreens/Home/AnswerScreens/Answers';
 import AddQuestion2 from './screens/ProfileScreens/Home/Questions/AddQuestion2';
+import WorkshopList from './screens/ProfileScreens/Workshop/WorkshopList';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -80,6 +81,7 @@ export default function App() {
           <Stack.Screen name="Question4" component={Question4} options={{ headerShown: false }} />
           <Stack.Screen name="AddQuestion4" component={AddQuestion4} options={{ headerShown: false }} />
           <Stack.Screen name="Scores" component={ScoreScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="WorkshopList" component={WorkshopList} options={{ headerShown: false }} />
           {/* <Stack.Screen name="Answers" component={Answers} options={{ headerShown: false }} /> */}
         </Stack.Navigator>
       </NavigationContainer>
