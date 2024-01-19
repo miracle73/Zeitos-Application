@@ -57,7 +57,7 @@ const Home = () => {
                                         Aliquet pharetra Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in.
                                         Aliquet pharetra
                                     </Text>
-                                    <CustomButton style={tw`flex flex-row justify-center items-center px-6 py-3 rounded-full bg-[#001C46]`}>
+                                    <CustomButton style={tw`flex flex-row justify-center items-center px-6 py-3 rounded-full bg-[#001C46]`} onPress={() => navigation.navigate("WorkshopList")}>
                                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-center text-white')}>View Details</Text>
                                     </CustomButton>
                                 </View>

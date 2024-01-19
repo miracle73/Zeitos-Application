@@ -20,8 +20,8 @@ import CreateNewPassword from './screens/Forgot/CreateNewPassword';
 import ResetSuccess from './screens/Forgot/ResetSuccess';
 import OnBoarding from './screens/Auth/OnBoarding';
 import Home from './screens/ProfileScreens/Home/Home';
-import File from "./screens/ProfileScreens/File";
-import Settings from "./screens/ProfileScreens/Settings";
+import Notifications from "./screens/Notifications/Notifications";
+import Settings from "./screens/Settings/Settings";
 import Question2 from './screens/ProfileScreens/Home/Questions/Question2';
 import Question3 from './screens/ProfileScreens/Home/Questions/Question3';
 import Question from './screens/ProfileScreens/Home/Questions/Question';
@@ -30,8 +30,10 @@ import AddQuestion3 from './screens/ProfileScreens/Home/Questions/AddQuestion3';
 import Question4 from './screens/ProfileScreens/Home/Questions/Question4';
 import AddQuestion4 from './screens/ProfileScreens/Home/Questions/AddQuestion4';
 import ScoreScreen from './screens/ProfileScreens/Home/ScoreScreen';
-// import Answers from './screens/ProfileScreens/Home/AnswerScreens/Answers';
+import Answers from './screens/ProfileScreens/Home/AnswerScreens/Answers';
 import AddQuestion2 from './screens/ProfileScreens/Home/Questions/AddQuestion2';
+import WorkshopList from './screens/ProfileScreens/Workshop/WorkshopList';
+import WorkshopPage from './screens/ProfileScreens/Workshop/WorkshopPage';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -80,7 +82,9 @@ export default function App() {
           <Stack.Screen name="Question4" component={Question4} options={{ headerShown: false }} />
           <Stack.Screen name="AddQuestion4" component={AddQuestion4} options={{ headerShown: false }} />
           <Stack.Screen name="Scores" component={ScoreScreen} options={{ headerShown: false }} />
-          {/* <Stack.Screen name="Answers" component={Answers} options={{ headerShown: false }} /> */}
+          <Stack.Screen name="WorkshopList" component={WorkshopList} options={{ headerShown: false }} />
+          <Stack.Screen name="Answers" component={Answers} options={{ headerShown: false }} />
+          <Stack.Screen name="WorkshopPage" component={WorkshopPage} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style='dark' />
@@ -102,7 +106,7 @@ export function Account() {
         tabBarLabel: '',
       }}
       />
-      <Tab.Screen name="File" component={File} options={{
+      <Tab.Screen name="Notification" component={Notifications} options={{
         headerShown: false,
         tabBarIcon: () => (
           <View style={tw`flex flex-row justify-center items-center bg-[#001C46] rounded-full px-4 py-2`}>

@@ -1,9 +1,10 @@
-import { View, Text, SafeAreaView, ScrollView, Pressable } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView } from 'react-native';
 import tw from 'twrnc';
 import Svg, { Path } from 'react-native-svg';
-import { Ionicons } from "@expo/vector-icons";
+// import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import Constants from "expo-constants"
+// import CustomButton from '../../../../components/CustomButton';
 // import {  } from 'react-native-safe-area-context';
 
 const UshiftAnswers = () => {
@@ -19,7 +20,7 @@ const UshiftAnswers = () => {
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Answered Scenario</Text>
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#4A4A68] text-sm')}>Read answers below</Text>
                         </View>
-                        <View style={tw`flex justify-center items-start bg-white gap-12 rounded-lg h-[230px] w-[358px] py-12 px-1.5`}>
+                        <View style={tw`flex justify-center items-start bg-white gap-12 rounded-lg h-[230px] w-[358px] py-12 px-1.5 m-auto`}>
                             <View>
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-base text-white rounded-lg bg-[#141414] text-center px-4 absolute top-[6px] left-[10px]')}>1</Text>
                                 <View style={tw`absolute top-[2px] left-[5px]`}>

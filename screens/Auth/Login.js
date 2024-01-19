@@ -85,7 +85,7 @@ const Login = () => {
   return (
     <ScrollView style={tw`bg-[#f5f7ff] p-4]`}>
       <View style={{ flex: 1 }} >
-        <View style={tw`flex justify-start items-start p-2`}>
+        <View style={tw`flex justify-center items-start p-2`}>
           <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Welcome 👋{"\n"}Login to your account</Text>
           {/* <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Login to your account</Text> */}
         </View>
@@ -102,11 +102,11 @@ const Login = () => {
             <CustomInput placeholder="Enter password" value={password} type='password' onChangeText={(password) => setPassword(password)} secureTextEntry={!isVisible} style={tw`w-[326px] h-[52px] bg-[#f5f7ff] rounded-lg px-4`} />
             <Ionicons name={isVisible ? "eye" : "eye-off"} size={19} color={"#c4c4c4"} style={tw`absolute bottom-[35px] right-[25px]`} onPress={handleToggle} />
           </View>
-          <View style={tw`flex flex-row justify-end items-end gap-4`}>
+          <View style={tw`flex flex-row justify-end items-end gap-4 w-[158px] ml-42`}>
             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-[#4a4a68] text-sm')}>Forgot Password?</Text>
             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#4a4a68] text-sm')} onPress={() => navigation.navigate("Reset Password")}>Reset</Text>
           </View>
-          <View style={tw`flex flex-row justify-center items-center`}>
+          <View style={tw`flex flex-row justify-center gap-px items-center`}>
             <CustomButton style={tw`bg-[#001c46] w-[326px] py-4 px-8 rounded-lg`}>
               <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center text-white text-lg')} onPress={() => navigation.navigate("Account")}>Login</Text>
             </CustomButton>
