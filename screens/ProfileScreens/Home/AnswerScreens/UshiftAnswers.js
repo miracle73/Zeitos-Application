@@ -1,9 +1,10 @@
-import { View, Text, SafeAreaView, ScrollView, Pressable } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView } from 'react-native';
 import tw from 'twrnc';
 import Svg, { Path } from 'react-native-svg';
-import { Ionicons } from "@expo/vector-icons";
+// import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import Constants from "expo-constants"
+// import CustomButton from '../../../../components/CustomButton';
 // import {  } from 'react-native-safe-area-context';
 
 const UshiftAnswers = () => {

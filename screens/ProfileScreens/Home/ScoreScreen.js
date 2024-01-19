@@ -1,5 +1,5 @@
-import { View, Text, SafeAreaView, Image } from 'react-native'
-import React from 'react'
+import { View, Text, SafeAreaView, Image } from 'react-native';
+import React from 'react';
 import tw from 'twrnc';
 import { Ionicons } from '@expo/vector-icons';
 import Constants from "expo-constants";
@@ -55,4 +55,4 @@ const ScoreScreen = () => {
     )
 }
 
-export default ScoreScreen
+export default ScoreScreen;
