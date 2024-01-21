@@ -5,10 +5,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-// import { Ionicons } from "@expo/vector-icons";
 import tw from 'twrnc';
 import { View, Text, Image } from 'react-native';
-// import { BlurView } from 'expo-blur';
 
 //import components
 import SignUp from './screens/Auth/SignUp';

@@ -32,7 +32,7 @@ const CreateNewPassword = () => {
                 </View>
                 <View style={tw`flex flex-row justify-center items-center m-auto`}>
                     <CustomButton style={tw`bg-[#001c46] w-[326px] py-4 px-8 rounded-lg`}>
-                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center text-white text-lg')} onPress={() => navigation.navigate("Congratulations")}>Create account</Text>
+                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center text-white text-lg')} onPress={() => navigation.navigate("Congratulations")}>Reset Password</Text>
                     </CustomButton>
                 </View>
             </View>
