@@ -1,7 +1,7 @@
 import { View, Text, TextInput } from 'react-native'
 import React from 'react'
 
-const CustomInput = ({ placeholder, value, type, style, onChangeText, secureTextEntry, multiline }) => {
+const CustomInput = ({ placeholder, value, type, style, onChangeText, secureTextEntry, multiline, numberOfLines, textAlignVertical }) => {
     return (
         <TextInput
             placeholder={placeholder}
@@ -11,6 +11,8 @@ const CustomInput = ({ placeholder, value, type, style, onChangeText, secureText
             onChangeText={onChangeText}
             secureTextEntry={secureTextEntry}
             multiline={multiline}
+            numberOfLines={numberOfLines}
+            textAlignVertical={textAlignVertical}
         />
     )
 }

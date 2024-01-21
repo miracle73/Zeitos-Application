@@ -22,7 +22,7 @@ const Home = () => {
             <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
                 <ScrollView vertical style={tw`pb-80`}>
                     <View style={tw`flex justify-center items-start gap-8 bg-[#f5f7ff] h-full p-4 pb-20`}>
-                        <Ionicons name="chevron-back" size={24} color={"#141414"} onPress={() => navigation.navigate("Login")} />
+                        {/* <Ionicons name="chevron-back" size={24} color={"#141414"} onPress={() => navigation.navigate("Login")} /> */}
                         <View style={tw`flex flex-row justify-between items-center gap-36`}>
                             <View style={tw`flex justify-start items-start gap-2`}>
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-base text-black')}>UShift</Text>

@@ -69,7 +69,7 @@ const Question2 = () => {
                                     <CustomInput placeholder="Enter answer header" style={tw`bg-[#f5f7f9]`} />
                                 </View>
 
-                                <CustomInput multiline={true} placeholder="Write solution here" placeholderText={"#8c8ca1"} style={tw`border-2 border-[#F5F7F9] bg-[#F5F7F9] w-[326px] h-[107px] p-2.5 m-2.5 rounded-lg`} />
+                                <CustomInput multiline={true} numberOfLines={5} textAlignVertical={"top"} placeholder="Write solution here" placeholderText={"#8c8ca1"} style={tw`border-2 border-[#F5F7F9] bg-[#F5F7F9] min-w-full p-2.5 rounded-lg`} />
 
                             </View>
                             <View style={tw`flex flex-col justify-center items-start gap-2 bg-white rounded-lg p-4 w-[100%]`}>
@@ -79,7 +79,7 @@ const Question2 = () => {
                                     <CustomInput placeholder="Enter answer header" style={tw`bg-[#f5f7f9]`} />
                                 </View>
 
-                                <CustomInput multiline={true} placeholder="Write solution here" placeholderText={"#8c8ca1"} style={tw`border-2 border-[#F5F7F9] bg-[#F5F7F9] w-[326px] h-[107px] p-2.5 m-2.5 rounded-lg`} />
+                                <CustomInput multiline={true} numberOfLines={5} textAlignVertical={"top"} placeholder="Write solution here" placeholderText={"#8c8ca1"} style={tw`border-2 border-[#F5F7F9] bg-[#F5F7F9] min-w-full p-2.5 rounded-lg`} />
 
                             </View>
                             <View style={tw`flex flex-row justify-between items-center gap-18 rounded-lg bg-white p-4`}>

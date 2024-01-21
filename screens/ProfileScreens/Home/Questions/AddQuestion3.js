@@ -69,7 +69,7 @@ const AddQuestion3 = () => {
                                     <Text style={tw`text-[#8c8ca1] w-[28px]`}>|</Text>
                                     <CustomInput placeholder="Enter answer header" style={tw`bg-[#f5f7f9]`} />
                                 </View>
-                                <CustomInput multiline={true} placeholder="Write solution here" placeholderText={"#8c8ca1"} style={tw`border-2 border-[#F5F7F9] bg-[#F5F7F9] w-[326px] h-[107px] p-2.5 m-2.5 rounded-lg`} />
+                                <CustomInput multiline={true} numberOfLines={5} textAlignVertical="top" placeholder="Write solution here" placeholderText={"#8c8ca1"} style={tw`border-2 border-[#F5F7F9] bg-[#F5F7F9] min-w-full p-2.5 rounded-lg`} />
                             </View>
                             <View style={tw`flex flex-col justify-center items-start gap-2 bg-white rounded-lg p-4 w-[100%]`}>
                                 <View style={tw`flex flex-row justify-evenly items-center bg-[#f5f7f9] rounded-lg w-80 p-4`}>
@@ -77,7 +77,7 @@ const AddQuestion3 = () => {
                                     <Text style={tw`text-[#8c8ca1] w-[28px]`}>|</Text>
                                     <CustomInput placeholder="Enter answer header" style={tw`bg-[#f5f7f9]`} />
                                 </View>
-                                <CustomInput multiline={true} placeholder="Write solution here" placeholderText={"#8c8ca1"} style={tw`border-2 border-[#F5F7F9] bg-[#F5F7F9] w-[326px] h-[107px] p-2.5 m-2.5 rounded-lg`} />
+                                <CustomInput multiline={true} numberOfLines={5} textAlignVertical="top" placeholder="Write solution here" placeholderText={"#8c8ca1"} style={tw`border-2 border-[#F5F7F9] bg-[#F5F7F9] min-w-full p-2.5 rounded-lg`} />
                             </View>
                             <View style={tw`flex flex-row justify-center items-center rounded-lg bg-white p-2 w-full`}>
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-center bg-[#F5F7FF] m-auto p-2 w-full rounded-lg')}>Add new solution input</Text>
