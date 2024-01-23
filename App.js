@@ -32,6 +32,8 @@ import Answers from './screens/ProfileScreens/Home/AnswerScreens/Answers';
 import AddQuestion2 from './screens/ProfileScreens/Home/Questions/AddQuestion2';
 import WorkshopList from './screens/ProfileScreens/Workshop/WorkshopList';
 import WorkshopPage from './screens/ProfileScreens/Workshop/WorkshopPage';
+import ProfileDetails from './screens/Settings/ProfileDetails';
+import ChangePassword from './screens/Settings/ChangePassword';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -83,6 +85,8 @@ export default function App() {
           <Stack.Screen name="WorkshopList" component={WorkshopList} options={{ headerShown: false }} />
           <Stack.Screen name="Answers" component={Answers} options={{ headerShown: false }} />
           <Stack.Screen name="WorkshopPage" component={WorkshopPage} options={{ headerShown: false }} />
+          <Stack.Screen name="Profile Details" component={ProfileDetails} options={{ headerShown: false }} />
+          <Stack.Screen name="Change Password" component={ChangePassword} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style='dark' />

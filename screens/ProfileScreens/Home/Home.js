@@ -52,7 +52,7 @@ const Home = () => {
                                 <Image source={require("../../../assets/home-image2.png")} />
                                 <View style={tw`flex flex-col justify-start items-start gap-4 w-3/5`}>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-sm text-left text-black w-[168px]')}>Workshops and Workbooks</Text>
-                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1] text-left w-[196px]')}>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1] text-left')}>
                                         Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in.
                                         Aliquet pharetra Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in.
                                         Aliquet pharetra
