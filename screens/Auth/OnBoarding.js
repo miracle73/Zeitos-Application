@@ -67,10 +67,10 @@ const OnBoarding = ({ navigation }) => {
 
                     <View style={tw`flex flex-col justify-center items-center gap-4`}>
                         <CustomButton style={tw`flex flex-row justify-center items-center bg-white w-[342px] py-5 rounded-lg`} onPress={() => navigation.navigate("Login")}>
-                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-base text-center')}>Login</Text>
+                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-lg text-center')}>Login</Text>
                         </CustomButton>
                         <CustomButton style={tw`flex flex-row justify-center items-center bg-[#d66b09] w-[342px] py-5 rounded-lg`} onPress={() => navigation.navigate("Create Account")}>
-                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-white text-base text-center')}>Create an Account</Text>
+                            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-white text-lg text-center')}>Create an Account</Text>
                         </CustomButton>
                     </View>
                 </View>
