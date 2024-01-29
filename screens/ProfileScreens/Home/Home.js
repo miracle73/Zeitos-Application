@@ -1,26 +1,25 @@
 //Libraries
-import { View, Text, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, Image, SafeAreaView, Animated, ScrollView, StyleSheet, Dimensions } from 'react-native';
 import React from 'react';
 import tw from "twrnc";
 import Constants from "expo-constants";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-// import RNAnimatedScrollIndicators from 'react-native-animated-scroll-indicators';
+import RNAnimatedScrollIndicators from 'react-native-animated-scroll-indicators';
 
 //import components
 import CustomButton from '../../../components/CustomButton';
 
 const Home = () => {
-    // scrollX = new Animated.Value(0);
-    // const { width, height } = Dimensions.get("window");
-
 
     const navigation = useNavigation();
+    scrollX = new Animated.Value(0);
+    const { width } = Dimensions.get("window");
 
     return (
         <>
             <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
-                <ScrollView vertical style={tw`pb-80`}>
+                <ScrollView vertical pagingEnabled style={tw`pb-80`}>
                     <View style={tw`flex justify-center items-center gap-8 bg-[#f5f7ff] min-h-full pb-20`}>
                         <View style={tw`flex flex-row justify-center items-center gap-18 bg-white min-w-full p-4`}>
                             <View style={tw`flex justify-start items-start gap-2`}>
@@ -33,7 +32,7 @@ const Home = () => {
                             </View>
                         </View>
                         <View style={tw`flex justify-center items-center gap-4 p-4`}>
-                            <View style={tw`flex flex-row justify-center items-center gap-4 mb-12`}>
+                            <View style={tw`flex flex-row justify-center items-center gap-4 mb-8`}>
                                 <View style={tw`bg-white rounded-3xl p-2`}>
                                     <View style={tw`flex justify-center items-center gap-2 bg-[#F5F7FF] rounded-3xl p-3`}>
                                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-xl text-[#000]')}>32</Text>
@@ -53,13 +52,21 @@ const Home = () => {
                                     </View>
                                 </View>
                             </View>
-                            <View style={tw`flex justify-start items-start gap-3`}>
-                                <View style={tw`flex flex-row justify-between items-center gap-32`}>
+                            <View style={tw`flex-1`}>
+                                <View style={tw`flex flex-row justify-between items-center gap-28`}>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg pl-6')}>Top scenario category</Text>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg')}>See all</Text>
                                 </View>
-                                <View style={tw`flex flex-row justify-center items-center gap-3 ml-16 mr-2`}>
-                                    <View style={tw`flex justify-start items-start gap-2 rounded-3xl py-4 px-2 bg-white`}>
+                                <Animated.ScrollView
+                                    horizontal
+                                    pagingEnabled
+                                    showsHorizontalScrollIndicator={false}
+                                    contentContainerStyle={{ flexGrow: 1, gap: 30 }}
+                                    onScroll={Animated.event(
+                                        [{ nativeEvent: { contentOffset: { x: this.scrollX } } }],
+                                        { useNativeDriver: true })}
+                                >
+                                    <View style={tw`flex justify-start items-start gap-2 rounded-3xl bg-white p-4 h-60`}>
                                         <Image source={require('../../../assets/ad3.png')} style={tw`m-auto rounded-3xl`} />
                                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg')}>Motivation doze</Text>
                                         <View style={tw`flex flex-row justify-start items-center gap-2`}>
@@ -67,7 +74,7 @@ const Home = () => {
                                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'bg-[#e9f8ee] text-[#3e8e7b] text-base rounded-lg px-4 py-2')}>Start now</Text>
                                         </View>
                                     </View>
-                                    <View style={tw`flex justify-start items-start gap-2 rounded-3xl py-4 px-2 bg-white`}>
+                                    <View style={tw`flex justify-start items-start gap-2 rounded-3xl bg-white p-4 h-60`}>
                                         <Image source={require('../../../assets/thisman.png')} style={tw`m-auto rounded-3xl`} />
                                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg')}>Wealth creation</Text>
                                         <View style={tw`flex flex-row justify-start items-center gap-2`}>
@@ -75,16 +82,32 @@ const Home = () => {
                                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'bg-[#e9f8ee] text-[#3e8e7b] text-base rounded-lg px-4 py-2')}>Start now</Text>
                                         </View>
                                     </View>
+                                </Animated.ScrollView>
+                                <View style={{
+                                    left: 0,
+                                    right: 0,
+                                    top: 320,
+                                    zIndex: 100,
+                                    marginBottom: 20,
+                                    position: 'absolute'
+                                }}>
+                                    <RNAnimatedScrollIndicators
+                                        numberOfCards={2}
+                                        scrollWidth={width}
+                                        activeColor={'#001C46'}
+                                        inActiveColor={'#8C8CA1'}
+                                        scrollAnimatedValue={this.scrollX}
+                                    />
                                 </View>
                             </View>
                             <View style={tw`bg-white flex flex-row justify-between items-center gap-36 rounded-xl px-5 py-3`}>
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg')}>View all Scenarios</Text>
-                                <Ionicons name='arrow-forward' color={"#fff"} size={24} style={tw`justify-center items-center bg-[#001c46] rounded-full p-3`}/>
+                                <Ionicons name='arrow-forward' color={"#fff"} size={24} style={tw`justify-center items-center bg-[#001c46] rounded-full p-3`} />
                             </View>
                             <View style={tw`flex flex-row justify-center items-start gap-6 bg-white rounded-lg p-4`}>
                                 <Image source={require("../../../assets/home-image2.png")} />
                                 <View style={tw`flex flex-col justify-start items-start gap-4 w-3/5`}>
-                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-sm text-left text-black w-[168px]')}>Workshops and Workbooks</Text>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-base text-left text-black w-[168px]')}>Workshops and Workbooks</Text>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1] text-left')}>
                                         Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in.
                                         Aliquet pharetra Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in.
@@ -95,6 +118,7 @@ const Home = () => {
                                     </CustomButton>
                                 </View>
                             </View>
+
                         </View>
                     </View>
                 </ScrollView>
