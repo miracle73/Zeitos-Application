@@ -21,7 +21,7 @@ const ScenarioTwo = () => {
 
     return (
         <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
-            <ScrollView vertical pagingEnabled>
+            <ScrollView vertical>
                 <View style={tw`flex justify-start items-start gap-4 bg-[#F5F7FF] min-h-full`}>
                     <View style={tw`flex justify-start items-start gap-4 bg-white w-full p-4`}>
                         <View>
