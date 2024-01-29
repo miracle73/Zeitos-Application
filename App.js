@@ -35,6 +35,10 @@ import WorkshopPage from './screens/ProfileScreens/Workshop/WorkshopPage';
 import ProfileDetails from './screens/Settings/ProfileDetails';
 import ChangePassword from './screens/Settings/ChangePassword';
 import ScenarioCategories from './screens/ProfileScreens/Categories/ScenarioCategories';
+import CategoryOne from './screens/ProfileScreens/Categories/CategoryScreens/CategoryOne';
+import ScenarioOne from './screens/ProfileScreens/Categories/CategoryQuestions/ScenarioOne';
+import ScenarioTwo from './screens/ProfileScreens/Categories/CategoryQuestions/ScenarioTwo';
+import VideoOne from './screens/ProfileScreens/Categories/Videos/VideoOne';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -89,6 +93,10 @@ export default function App() {
           <Stack.Screen name="Profile Details" component={ProfileDetails} options={{ headerShown: false }} />
           <Stack.Screen name="Change Password" component={ChangePassword} options={{ headerShown: false }} />
           <Stack.Screen name="Scenario Categories" component={ScenarioCategories} options={{ headerShown: false }} />
+          <Stack.Screen name="Category One" component={CategoryOne} options={{ headerShown: false }} />
+          <Stack.Screen name="Scenario One" component={ScenarioOne} options={{ headerShown: false }} />
+          <Stack.Screen name='Scenario Two' component={ScenarioTwo} options={{ headerShown: false }} />
+          <Stack.Screen name='Video' component={VideoOne} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style='dark' />
