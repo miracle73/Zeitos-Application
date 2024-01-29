@@ -20,8 +20,8 @@ const Home = () => {
         <>
             <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
                 <ScrollView vertical pagingEnabled style={tw`pb-80`}>
-                    <View style={tw`flex justify-center items-center gap-8 bg-[#f5f7ff] min-h-full pb-20`}>
-                        <View style={tw`flex flex-row justify-center items-center gap-18 bg-white min-w-full p-4`}>
+                    <View style={tw`flex justify-center items-center bg-[#f5f7ff] min-h-full pb-20`}>
+                        <View style={tw`flex flex-row justify-center items-center gap-18 bg-white min-w-full p-4 mt-24`}>
                             <View style={tw`flex justify-start items-start gap-2`}>
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-xl text-black')}>Hello Mensah</Text>
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1]')}>You are a Champion, stay winning</Text>
@@ -52,10 +52,10 @@ const Home = () => {
                                     </View>
                                 </View>
                             </View>
-                            <View style={tw`flex-1`}>
+                            <View style={tw`flex-1 justify-center items-center gap-4 h-20`}>
                                 <View style={tw`flex flex-row justify-between items-center gap-28`}>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg pl-6')}>Top scenario category</Text>
-                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg')}>See all</Text>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg')} onPress={() => navigation.navigate('Scenario Categories')}>See all</Text>
                                 </View>
                                 <Animated.ScrollView
                                     horizontal
@@ -87,7 +87,7 @@ const Home = () => {
                                     left: 0,
                                     right: 0,
                                     top: 320,
-                                    zIndex: 100,
+                                    // zIndex: 100,
                                     marginBottom: 20,
                                     position: 'absolute'
                                 }}>
@@ -104,7 +104,7 @@ const Home = () => {
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg')}>View all Scenarios</Text>
                                 <Ionicons name='arrow-forward' color={"#fff"} size={24} style={tw`justify-center items-center bg-[#001c46] rounded-full p-3`} />
                             </View>
-                            <View style={tw`flex flex-row justify-center items-start gap-6 bg-white rounded-lg p-4`}>
+                            <View style={tw`flex flex-row justify-center items-start gap-6 bg-white rounded-lg p-4 mb-32`}>
                                 <Image source={require("../../../assets/home-image2.png")} />
                                 <View style={tw`flex flex-col justify-start items-start gap-4 w-3/5`}>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-base text-left text-black w-[168px]')}>Workshops and Workbooks</Text>

@@ -34,6 +34,7 @@ import WorkshopList from './screens/ProfileScreens/Workshop/WorkshopList';
 import WorkshopPage from './screens/ProfileScreens/Workshop/WorkshopPage';
 import ProfileDetails from './screens/Settings/ProfileDetails';
 import ChangePassword from './screens/Settings/ChangePassword';
+import ScenarioCategories from './screens/ProfileScreens/Categories/ScenarioCategories';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -87,6 +88,7 @@ export default function App() {
           <Stack.Screen name="WorkshopPage" component={WorkshopPage} options={{ headerShown: false }} />
           <Stack.Screen name="Profile Details" component={ProfileDetails} options={{ headerShown: false }} />
           <Stack.Screen name="Change Password" component={ChangePassword} options={{ headerShown: false }} />
+          <Stack.Screen name="Scenario Categories" component={ScenarioCategories} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style='dark' />
@@ -112,7 +114,7 @@ export function Account() {
         headerShown: false,
         tabBarIcon: () => (
           <View style={tw`flex flex-row justify-center items-center bg-[#001C46] rounded-full px-4 py-2`}>
-            <Image source={require("./assets/notification.png")} />
+            <Image source={require("./assets/ranking.png")} />
           </View>
         ),
         tabBarLabel: ''
