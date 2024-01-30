@@ -19,7 +19,7 @@ const Home = () => {
     return (
         <>
             <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
-                <ScrollView vertical pagingEnabled style={tw`pb-80`}>
+                <ScrollView vertical style={tw`pb-80`}>
                     <View style={tw`flex justify-center items-center bg-[#f5f7ff] min-h-full pb-20`}>
                         <View style={tw`flex flex-row justify-center items-center gap-18 bg-white min-w-full p-4 mt-24`}>
                             <View style={tw`flex justify-start items-start gap-2`}>
@@ -59,7 +59,6 @@ const Home = () => {
                                 </View>
                                 <Animated.ScrollView
                                     horizontal
-                                    pagingEnabled
                                     showsHorizontalScrollIndicator={false}
                                     contentContainerStyle={{ flexGrow: 1, gap: 30 }}
                                     onScroll={Animated.event(
