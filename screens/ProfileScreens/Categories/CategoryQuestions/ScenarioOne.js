@@ -102,7 +102,7 @@ const ScenarioOne = () => {
                         </View>
                     </View>
                     <View style={tw`flex flex-row justify-end items-end gap-12 rounded-lg bg-white min-w-full p-4 h-20`}>
-                        <CustomButton style={tw`flex flex-row justify-between items-center bg-[#001c46] rounded-lg px-4 py-3`} onPress={() => navigation.navigate("Video")}>
+                        <CustomButton style={tw`flex flex-row justify-between items-center bg-[#001c46] rounded-lg px-4 py-3`} onPress={() => navigation.navigate("Scenario Two")}>
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-base text-white')}>Next Scenario</Text>
                             <Ionicons name="chevron-forward" size={20} color={"#fff"} />
                         </CustomButton>

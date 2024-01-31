@@ -39,6 +39,8 @@ import ScenarioOne from './screens/ProfileScreens/Categories/CategoryQuestions/S
 import ScenarioTwo from './screens/ProfileScreens/Categories/CategoryQuestions/ScenarioTwo';
 import VideoOne from './screens/ProfileScreens/Categories/Videos/VideoOne';
 import LeaderBoard from './screens/LeaderBoard/LeaderBoard';
+import SubmitScenarios from './screens/ProfileScreens/Categories/CategoryQuestions/SubmitScenarios';
+import Score from './screens/ProfileScreens/Categories/CategoryQuestions/Score';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -98,6 +100,8 @@ export default function App() {
           <Stack.Screen name="Scenario One" component={ScenarioOne} options={{ headerShown: false }} />
           <Stack.Screen name='Scenario Two' component={ScenarioTwo} options={{ headerShown: false }} />
           <Stack.Screen name='Video' component={VideoOne} options={{ headerShown: false }} />
+          <Stack.Screen name='Submit Scenarios' component={SubmitScenarios} options={{ headerShown: false }} />
+          <Stack.Screen name='Score' component={Score} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style='dark' />
