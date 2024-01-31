@@ -1,5 +1,5 @@
 //Libraries
-import { View, Text, Image, SafeAreaView, Animated, ScrollView, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Text, Image, SafeAreaView, Animated, ScrollView, StyleSheet, Dimensions, TouchableOpacity, Pressable } from 'react-native';
 import React from 'react';
 import tw from "twrnc";
 import Constants from "expo-constants";
@@ -19,7 +19,7 @@ const Home = () => {
     return (
         <>
             <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
-                <ScrollView vertical pagingEnabled style={tw`pb-80`}>
+                <ScrollView vertical style={tw`pb-80`}>
                     <View style={tw`flex justify-center items-center bg-[#f5f7ff] min-h-full pb-20`}>
                         <View style={tw`flex flex-row justify-center items-center gap-18 bg-white min-w-full p-4 mt-24`}>
                             <View style={tw`flex justify-start items-start gap-2`}>
@@ -59,7 +59,6 @@ const Home = () => {
                                 </View>
                                 <Animated.ScrollView
                                     horizontal
-                                    pagingEnabled
                                     showsHorizontalScrollIndicator={false}
                                     contentContainerStyle={{ flexGrow: 1, gap: 30 }}
                                     onScroll={Animated.event(
@@ -100,10 +99,10 @@ const Home = () => {
                                     />
                                 </View>
                             </View>
-                            <View style={tw`bg-white flex flex-row justify-between items-center gap-36 rounded-xl px-5 py-3`}>
+                            <Pressable onPress={() => navigation.navigate('Scenarios')} style={tw`bg-white flex flex-row justify-between items-center gap-36 rounded-xl px-5 py-3`}>
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg')}>View all Scenarios</Text>
                                 <Ionicons name='arrow-forward' color={"#fff"} size={24} style={tw`justify-center items-center bg-[#001c46] rounded-full p-3`} />
-                            </View>
+                            </Pressable>
                             <View style={tw`flex flex-row justify-center items-start gap-6 bg-white rounded-lg p-4 mb-32`}>
                                 <Image source={require("../../../assets/home-image2.png")} />
                                 <View style={tw`flex flex-col justify-start items-start gap-4 w-3/5`}>
