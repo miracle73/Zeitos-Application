@@ -1,7 +1,6 @@
 import { View, Text, SafeAreaView, ScrollView, Pressable } from 'react-native';
 import { useState, useEffect } from 'react';
 import tw from 'twrnc';
-import Svg, { Path } from 'react-native-svg';
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import Constants from "expo-constants"
