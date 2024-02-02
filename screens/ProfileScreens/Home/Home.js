@@ -4,6 +4,7 @@ import React from 'react';
 import tw from "twrnc";
 import Constants from "expo-constants";
 import { Ionicons } from "@expo/vector-icons";
+import { StatusBar } from 'expo-status-bar';
 import { useNavigation } from "@react-navigation/native";
 import RNAnimatedScrollIndicators from 'react-native-animated-scroll-indicators';
 
@@ -18,6 +19,7 @@ const Home = () => {
 
     return (
         <>
+                 <StatusBar style="auto" barStyle="#f5f7ff" hidden={false} />
             <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
                 <ScrollView vertical style={tw`pb-80`}>
                     <View style={tw`flex justify-center items-center bg-[#f5f7ff] min-h-full pb-20`}>
