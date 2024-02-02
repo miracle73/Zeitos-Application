@@ -104,14 +104,14 @@ export default function App() {
           <Stack.Screen name='Score' component={Score} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar style='dark' />
+      <StatusBar style='dark' backgroundColor='#fff' />
     </>
   );
 }
 
 export function Account() {
   return (
-    <Tab.Navigator screenOptions={{ tabBarStyle: { height: 80, backgroundColor: '#f5f7ff' } }}>
+    <Tab.Navigator screenOptions={{ tabBarStyle: { height: 80, backgroundColor: 'transparent', elevation: 0, borderTopWidth: 0, position: 'absolute' } }}>
       <Tab.Screen
         name="Home"
         component={Home}

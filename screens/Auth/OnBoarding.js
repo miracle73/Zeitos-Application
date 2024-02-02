@@ -79,7 +79,7 @@ const OnBoarding = ({ navigation }) => {
     }
     return (
         <SafeAreaView style={tw`flex-1`}>
-            <StatusBar />
+            <StatusBar hidden/>
             <FlatList
                 onMomentumScrollEnd={updateCurrentSlideIndex}
                 showsHorizontalScrollIndicator={false}
