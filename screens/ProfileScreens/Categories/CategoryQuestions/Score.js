@@ -28,27 +28,27 @@ const Score = () => {
 
                     <View style={tw`flex flex-row justify-between items-center p-4 rounded-lg w-[342px] bg-[#f5f7ff]`}>
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-black text-lg')}>Scenario 1-</Text>
-                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-lg')}>Correct<Text style={tw`text-[#3e8e7b]`}> ✔ </Text></Text>
+                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-sm')}>Correct<Text style={tw`text-[#3e8e7b]`}> ✔ </Text></Text>
                     </View>
                     <View style={tw`flex flex-row justify-between items-center p-4 rounded-lg w-[342px] bg-[#f5f7ff]`}>
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-black text-lg')}>Scenario 2-</Text>
-                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-lg')}>Wrong <Text style={tw`text-[#D45151]`}>✖ </Text></Text>
+                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-sm')}>Wrong <Text style={tw`text-[#D45151]`}>✖ </Text></Text>
                     </View>
                     <View style={tw`flex flex-row justify-between items-center p-4 rounded-lg w-[342px] bg-[#f5f7ff]`}>
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-black text-lg')}>Scenario 3-</Text>
-                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-lg')}>Wrong <Text style={tw`text-[#D45151]`}>✖ </Text></Text>
+                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-sm')}>Wrong <Text style={tw`text-[#D45151]`}>✖ </Text></Text>
                     </View>
                     <View style={tw`flex flex-row justify-between items-center p-4 rounded-lg w-[342px] bg-[#f5f7ff]`}>
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-black text-lg')}>Scenario 4-</Text>
-                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-lg')}>Correct<Text style={tw`text-[#3e8e7b]`}> ✔ </Text></Text>
+                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-sm')}>Correct<Text style={tw`text-[#3e8e7b]`}> ✔ </Text></Text>
                     </View>
                 </View>
 
-                <View style={tw`flex flex-row justify-between items-center gap-8 mt-24`}>
+                <View style={tw`flex flex-row justify-between items-center gap-4 mt-24`}>
                     <CustomButton style={tw`flex flex-row justify-between items-center gap-8 bg-[#F5F7FF] rounded-lg px-4 py-4`} onPress={() => navigation.navigate("Home")}>
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001C46] text-lg')}>Go Home</Text>
                     </CustomButton>
-                    <CustomButton style={tw`flex flex-row justify-between items-center gap-8 bg-[#001c46] rounded-lg px-4 py-4`} onPress={() => navigation.navigate("LeaderBoard")}>
+                    <CustomButton style={tw`flex flex-row justify-between items-center gap-8 bg-[#001c46] rounded-lg px-3 py-4`} onPress={() => navigation.navigate("LeaderBoard")}>
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-white text-lg')}>View leader board</Text>
                         <Image source={require("../../../../assets/ranking.png")} />
                     </CustomButton>

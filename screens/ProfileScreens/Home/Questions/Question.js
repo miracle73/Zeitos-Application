@@ -16,7 +16,7 @@ const Question = () => {
 
   return (
     <>
-      <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
+      <SafeAreaView style={{ marginTop: Constants.statusBarHeight}}>
         <ScrollView vertical>
           <View style={tw`flex justify-start items-start bg-[#f5f7ff] gap-4 h-full`}>
             <View style={tw`flex justify-start items-start gap-4 bg-white w-full p-4`}>
@@ -45,7 +45,7 @@ const Question = () => {
                     </Svg>
                   </View>
                 </View>
-                <View style={tw`mt-18 flex justify-center items-start pb-4`}>
+                <View style={tw`mt-18 flex justify-center items-start pb-4 px-6`}>
                   <View style={tw`flex flex-row justify-center items-start gap-2`}>
                     <Text style={tw`text-[#141414] text-3xl`}>.</Text>
                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-[#4A4A68] text-sm pt-4')}>Who are the role players involved?</Text>

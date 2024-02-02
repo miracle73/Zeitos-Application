@@ -46,7 +46,7 @@ const AddQuestion3 = () => {
                                         </Svg>
                                     </View>
                                 </View>
-                                <View style={tw`mt-18 flex justify-center items-start pb-4`}>
+                                <View style={tw`mt-18 flex justify-center items-start pb-4 px-6`}>
                                     <View style={tw`flex flex-row justify-center items-start gap-2`}>
                                         <Text style={tw`text-[#141414] text-3xl`}>.</Text>
                                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-[#4A4A68] text-sm pt-4')}>Who are the role players involved?</Text>

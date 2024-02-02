@@ -32,7 +32,7 @@ const Home = () => {
                             </View>
                         </View>
                         <View style={tw`flex justify-center items-center gap-4 p-4`}>
-                            <View style={tw`flex flex-row justify-center items-center gap-4 mb-8`}>
+                            <View style={tw`flex flex-row justify-center items-center gap-4 mb-8 px-6`}>
                                 <View style={tw`bg-white rounded-3xl p-2`}>
                                     <View style={tw`flex justify-center items-center gap-2 bg-[#F5F7FF] rounded-3xl p-3`}>
                                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-xl text-[#000]')}>32</Text>
@@ -52,10 +52,10 @@ const Home = () => {
                                     </View>
                                 </View>
                             </View>
-                            <View style={tw`flex-1 justify-center items-center gap-4 h-20`}>
-                                <View style={tw`flex flex-row justify-between items-center gap-28`}>
+                            <View style={tw`flex-1 justify-center items-center gap-4 h-20 `}>
+                                <View style={tw`flex flex-row justify-between items-center gap-28 px-6`}>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg pl-6')}>Top scenario category</Text>
-                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg')} onPress={() => navigation.navigate('Scenario Categories')}>See all</Text>
+                                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#001c46] text-lg mr-4')} onPress={() => navigation.navigate('Scenario Categories')}>See all</Text>
                                 </View>
                                 <Animated.ScrollView
                                     horizontal
@@ -64,6 +64,7 @@ const Home = () => {
                                     onScroll={Animated.event(
                                         [{ nativeEvent: { contentOffset: { x: this.scrollX } } }],
                                         { useNativeDriver: true })}
+                                    overScrollMode='never'
                                 >
                                     <TouchableOpacity onPress={() => navigation.navigate('Category One')} style={tw`flex justify-start items-start gap-2 rounded-3xl bg-white p-4 h-60`}>
                                         <Image source={require('../../../assets/ad3.png')} style={tw`m-auto rounded-3xl`} />
