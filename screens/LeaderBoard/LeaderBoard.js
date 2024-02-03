@@ -1,3 +1,4 @@
+import { StatusBar } from 'expo-status-bar';
 import { View, Text, Image, SafeAreaView, ScrollView, Pressable } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import tw from 'twrnc';
@@ -48,9 +49,10 @@ const LeaderBoard = () => {
 
   return (
     <>
+      <StatusBar style={'light'} backgroundColor="#001C46" barStyle={'default'} />
       <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
         <ScrollView vertical>
-          <View style={tw`flex justify-start items-start gap-6 bg-[#001C46] min-h-full p-4`}>
+          <View style={tw`flex justify-start items-start gap-6 bg-[#001C46] min-h-full p-4 pb-60 pt-9`}>
             <View style={tw`flex flex-row justify-start items-start gap-32`}>
               <Text style={tw.style({ fontFamily: 'WixFont' }, 'text-white text-3xl')}>Leader board</Text>
               <Image source={require('../../assets/funnel.png')} />

@@ -1,4 +1,5 @@
-import { Text, View, Pressable, ScrollView, Alert, SafeAreaView, Image, StatusBar } from 'react-native';
+import { Text, View, Pressable, ScrollView, Alert, SafeAreaView, Image } from 'react-native';
+import {StatusBar} from 'expo-status-bar';
 import { useState, useEffect } from 'react';
 import tw from 'twrnc';
 import { useNavigation } from "@react-navigation/native";
@@ -86,9 +87,9 @@ const Login = () => {
   return (
     <>
       <StatusBar backgroundColor='#f5f7ff' />
-      <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
+      {/* <SafeAreaView style={{ marginTop: Constants.statusBarHeight, backgroundColor: '#f5f7ff' }}> */}
         <ScrollView style={tw`bg-[#f5f7ff] p-4`}>
-          <View style={{ flex: 1 }}>
+          <View style={tw`flex-1`}>
             <View style={tw`flex justify-center items-start p-2`}>
               <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Welcome 👋{"\n"}Login to your account</Text>
               {/* <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Login to your account</Text> */}
@@ -121,7 +122,7 @@ const Login = () => {
             </View>
           </View>
         </ScrollView>
-      </SafeAreaView>
+      {/* </SafeAreaView> */}
     </>
   )
 }

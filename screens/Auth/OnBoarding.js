@@ -1,5 +1,6 @@
 import React from 'react'
-import { FlatList, ImageBackground, SafeAreaView, StatusBar, Text, View, Dimensions, StyleSheet } from 'react-native';
+import { FlatList, ImageBackground, SafeAreaView, Text, View, Dimensions, StyleSheet } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import tw from 'twrnc';
 // import { useNavigate } from "@react-navigation/native";
 
@@ -78,17 +79,19 @@ const OnBoarding = ({ navigation }) => {
         )
     }
     return (
-        <SafeAreaView style={tw`flex-1`}>
-            <StatusBar hidden/>
-            <FlatList
-                onMomentumScrollEnd={updateCurrentSlideIndex}
-                showsHorizontalScrollIndicator={false}
-                horizontal
-                pagingEnabled
-                data={slides}
-                renderItem={({ item }) => <Slide item={item} />}
-            />
-        </SafeAreaView>
+        <>
+            <StatusBar backgroundColor='transparent' style='light' barStyle={'light-content'} />
+            <SafeAreaView style={tw`flex-1`}>
+                <FlatList
+                    onMomentumScrollEnd={updateCurrentSlideIndex}
+                    showsHorizontalScrollIndicator={false}
+                    horizontal
+                    pagingEnabled
+                    data={slides}
+                    renderItem={({ item }) => <Slide item={item} />}
+                />
+            </SafeAreaView>
+        </>
     )
 }
 

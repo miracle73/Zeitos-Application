@@ -1,4 +1,5 @@
 import { View, Text, SafeAreaView, Image, Pressable, Switch } from 'react-native';
+import {StatusBar} from 'expo-status-bar';
 import { useState } from 'react';
 import tw from 'twrnc';
 import Constants from 'expo-constants';
@@ -16,7 +17,8 @@ const Settings = () => {
 
   return (
     <>
-      <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
+      <StatusBar style='dark' backgroundColor={'#FFFFFF'} barStyle={'dark-content'}/>
+      <SafeAreaView style={{ marginTop: Constants.statusBarHeight, backgroundColor: '#ffffff' }}>
         <View style={tw`flex justify-start items-center gap-4 bg-[#FFFFFF] h-full`}>
           <View style={tw`flex justify-start items-start bg-white min-w-full p-6 border-b-[#808080]`}>
             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-xl')}>Profile & Settings</Text>

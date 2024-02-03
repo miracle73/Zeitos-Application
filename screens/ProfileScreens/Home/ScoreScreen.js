@@ -14,8 +14,8 @@ const ScoreScreen = () => {
 
     return (
         <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
-            <View style={tw`bg-white w-full pt-4`}>
-                <Ionicons name="chevron-back" size={24} color={"#141414"} onPress={() => navigation.navigate("Home")} />
+            <View style={tw`bg-white w-full pt-4 pl-4`}>
+                <Ionicons name="chevron-back" size={24} color={"#141414"} onPress={() => navigation.goBack()} />
             </View>
             <View style={tw`flex justify-center items-start gap-4 p-4 bg-white h-full`}>
                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-3xl text-left text-[#141414]')}>Great Job! 👍 </Text>
