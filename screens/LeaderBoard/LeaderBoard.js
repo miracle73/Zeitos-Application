@@ -49,10 +49,10 @@ const LeaderBoard = () => {
 
   return (
     <>
-      <StatusBar style={'light'} backgroundColor="#001C46" barStyle={'default'} />
+      <StatusBar style={'light'} backgroundColor="#001C46" barStyle={'light-content'} />
       <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}>
         <ScrollView vertical>
-          <View style={tw`flex justify-start items-start gap-6 bg-[#001C46] min-h-full p-4 pb-60 pt-9`}>
+          <View style={tw`flex justify-start items-start gap-12 bg-[#001C46] min-h-full px-4 pt-9 pb-24`}>
             <View style={tw`flex flex-row justify-start items-start gap-32`}>
               <Text style={tw.style({ fontFamily: 'WixFont' }, 'text-white text-3xl')}>Leader board</Text>
               <Image source={require('../../assets/funnel.png')} />

@@ -32,7 +32,7 @@ const ScenarioOne = () => {
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#4A4A68]')}>Read scenario and provide responses in the fields below</Text>
                         </View>
                     </View>
-                    <View style={tw`gap-4 p-4`}>
+                    <View style={tw`gap-4 p-4 px-4`}>
                         <View style={tw`flex justify-center items-start bg-white rounded-lg p-16 w-[358px] m-auto`}>
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-base text-white rounded-lg bg-[#141414] text-center px-4 absolute top-[6px] left-[10px]')}>1</Text>
                             <View style={tw`absolute top-[2px] left-[5px]`}>

@@ -1,13 +1,13 @@
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
 import tw from 'twrnc'
 
 const Weekly = () => {
   return (
-    <View>
-      <Text style={tw`text-white`}>Weekly</Text>
+    <View style={tw`flex justify-center items-center p-52`}>
+      <Text>Weekly</Text>
     </View>
   )
 }
 
-export default Weekly
+export default Weekly;

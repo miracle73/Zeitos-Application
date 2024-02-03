@@ -23,7 +23,7 @@ const Home = () => {
             {/* <SafeAreaView style={{ marginTop: Constants.statusBarHeight }}> */}
             <ScrollView vertical style={tw`pb-80`}>
                 <View style={tw`flex justify-center items-center bg-[#f5f7ff] min-h-full pb-40 pt-4`}>
-                    <View style={tw`flex flex-row justify-center items-center gap-18 bg-white min-w-full p-5 mt-24`}>
+                    <View style={tw`flex flex-row justify-center items-center gap-18 bg-white w-full mt-28 ml-2 h-24 px-4`}>
                         <View style={tw`flex justify-start items-start gap-2`}>
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-xl text-black')}>Hello Mensah</Text>
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1]')}>You are a Champion, stay winning</Text>
@@ -34,7 +34,7 @@ const Home = () => {
                         </View>
                     </View>
                     <View style={tw`flex justify-center items-center gap-4 p-4`}>
-                        <View style={tw`flex flex-row justify-around items-center gap-8 mb-8 px-6`}>
+                        <View style={tw`flex flex-row justify-between items-center gap-4 mb-8 px-6`}>
                             <View style={tw`bg-white rounded-3xl p-2`}>
                                 <View style={tw`flex justify-center items-center gap-2 bg-[#F5F7FF] rounded-3xl p-3`}>
                                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-xl text-[#000]')}>32</Text>
