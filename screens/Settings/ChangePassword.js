@@ -45,7 +45,7 @@ const ChangePassword = () => {
                         <CustomInput placeholder="Confirm new Password" value={confirmPassword} type="password" onChangeText={(password) => setConfirmPassword(password)} style={tw`bg-[#F5F7F9] rounded-lg p-4 min-w-full`} secureTextEntry={!isVisible} />
                         <Ionicons name={isVisible ? "eye" : "eye-off"} size={18} color={"#c4c4c4"} style={tw`absolute bottom-[35px] right-[25px]`} onPress={handleToggle} />
                     </View>
-                    <View style={tw`flex justify-center items-center mt-24 min-w-full`}>
+                    <View style={tw`flex justify-center items-center min-w-full`}>
                         <CustomButton style={tw`bg-[#001c46] w-[326px] py-4 px-8 rounded-lg`} onPress={handleModal}>
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-center text-white text-lg')}>Change Password</Text>
                         </CustomButton>

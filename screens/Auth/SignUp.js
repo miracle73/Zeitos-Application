@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Pressable } from 'react-native'
+import { View, Text, ScrollView, Pressable, StatusBar } from 'react-native'
 import { useState, useEffect } from 'react'
 import tw from 'twrnc';
 import { useNavigation } from "@react-navigation/native";
@@ -42,6 +42,8 @@ const SignUp = () => {
     }, [navigation]);
 
     return (
+        <>
+        <StatusBar style='dark' backgroundColor={"#f5f7ff"}/>
         <ScrollView>
             <View style={tw`gap-8 bg-[#F5F7FF] h-full p-4`}>
                 <View style={tw`flex flex-col justify-start items-start gap-6`}>
@@ -85,6 +87,7 @@ const SignUp = () => {
                 </View>
             </View>
         </ScrollView>
+        </>
     )
 }
 
