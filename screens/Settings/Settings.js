@@ -36,7 +36,7 @@ const Settings = () => {
             </View>
           </View>
           <View style={tw`flex justify-start items-start gap-8 p-4`}>
-            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-xl text-[#747474] mr-72')}>Settings</Text>
+            <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-xl text-[#747474]')}>Settings</Text>
             <Pressable style={tw`flex flex-row justify-center items-center gap-6 bg-white`} onPress={() => navigation.navigate("Change Password")}>
               <Image source={require("../../assets/gear.png")} />
               <View style={tw`flex justify-start items-start`}>

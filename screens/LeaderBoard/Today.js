@@ -86,7 +86,6 @@ const Today = () => {
             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-white text-lg text-right')}>1200</Text>
           </View>
         </View>
-
       </View>
     </View>
   )
