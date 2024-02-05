@@ -37,10 +37,11 @@ import ScenarioCategories from './screens/ProfileScreens/Categories/ScenarioCate
 import CategoryOne from './screens/ProfileScreens/Categories/CategoryScreens/CategoryOne';
 import ScenarioOne from './screens/ProfileScreens/Categories/CategoryQuestions/ScenarioOne';
 import ScenarioTwo from './screens/ProfileScreens/Categories/CategoryQuestions/ScenarioTwo';
-import VideoOne from './screens/ProfileScreens/Categories/Videos/VideoOne';
 import LeaderBoard from './screens/LeaderBoard/LeaderBoard';
 import SubmitScenarios from './screens/ProfileScreens/Categories/CategoryQuestions/SubmitScenarios';
 import Score from './screens/ProfileScreens/Categories/CategoryQuestions/Score';
+import VideoPost from './screens/ProfileScreens/Categories/Videos/VideoPost';
+import VideoScroller from './screens/ProfileScreens/Categories/Videos/VideoScroller';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -99,9 +100,10 @@ export default function App() {
           <Stack.Screen name="Category One" component={CategoryOne} options={{ headerShown: false }} />
           <Stack.Screen name="Scenario One" component={ScenarioOne} options={{ headerShown: false }} />
           <Stack.Screen name='Scenario Two' component={ScenarioTwo} options={{ headerShown: false }} />
-          <Stack.Screen name='Video' component={VideoOne} options={{ headerShown: false }} />
+          <Stack.Screen name='Video Post' component={VideoPost} options={{ headerShown: false }} />
           <Stack.Screen name='Submit Scenarios' component={SubmitScenarios} options={{ headerShown: false }} />
           <Stack.Screen name='Score' component={Score} options={{ headerShown: false }} />
+          <Stack.Screen name='Video Scroller' component={VideoScroller} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
       {/* <StatusBar style='dark' backgroundColor={"#ffffff"} barStyle={'dark-content'} /> */}

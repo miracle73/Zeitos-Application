@@ -52,7 +52,7 @@ const MyAnswers = () => {
                                 </View>
                             </View>
                         </View>
-                        <View style={tw`flex flex-row justify-center items-center`}>
+                        <View style={tw`flex flex-row justify-center items-center px-4`}>
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-left text-[#4A4A68] text-base')}>
                                 Handling a situation where a co-worker is spreading rumors requires
                                 a professional approach to address the
@@ -61,7 +61,7 @@ const MyAnswers = () => {
                             </Text>
                         </View>
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-left text-lg text-[#141414]')}>Solutions</Text>
-                        <View style={tw`flex flex-col justify-center items-center gap-2`}>
+                        <View style={tw`flex flex-col justify-center items-center gap-2 px-4`}>
                             <View style={tw`flex flex-col justify-center items-start gap-2 bg-white px-5 py-3 rounded-lg`}>
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-black text-lg')}>1. Gather Information</Text>
                                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-[#4A4A68] text-base')}>
@@ -99,7 +99,7 @@ const MyAnswers = () => {
                                 </Text>
                             </View>
                         </View>
-                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-left text-[#4A4A68] text-base')}>
+                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-left text-[#4A4A68] text-base px-4 mb-4')}>
                             Lorem ipsum dolor sit amet consectetur. Porttitor tristique amet eget vitae vulputate quis non ac. Est velit a potenti sollicitudin nunc euismod turpis tempor. Scelerisque turpis vitae .
                         </Text>
                     </View>

@@ -54,7 +54,7 @@ const CategoryOne = () => {
                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'bg-[#e9f8ee] text-[#3e8e7b] text-base rounded-lg px-2 py-2')} onPress={() => navigation.navigate('Scenario Two')}>Start now</Text>
               </View>
             </View>
-            <Pressable onPress={() => navigation.navigate('Video')} style={tw`flex flex-row justify-center items-start gap-4 bg-white p-8 rounded-lg min-w-full`}>
+            <Pressable onPress={() => navigation.navigate('Video Scroller')} style={tw`flex flex-row justify-center items-start gap-4 bg-white p-8 rounded-lg min-w-full`}>
               <Image source={require("../../../../assets/ad1.png")} style={tw`w-28 rounded-xl`} />
               <View style={tw`flex justify-start items-start gap-2`}>
                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-[#141414] text-base')}>Video scenario</Text>
@@ -64,7 +64,7 @@ const CategoryOne = () => {
                 </Text>
                 <View style={tw`flex flex-row justify-between items-center gap-8`}>
                   <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#4A4A68] text-base')}>4 - Videos</Text>
-                  <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'bg-[#e9f8ee] text-[#3e8e7b] text-base rounded-lg px-2 py-2')} onPress={() => navigation.navigate('Video')}>Start now</Text>
+                  <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'bg-[#e9f8ee] text-[#3e8e7b] text-base rounded-lg px-2 py-2')} onPress={() => navigation.navigate('Video Scroller')}>Start now</Text>
                 </View>
               </View>
             </Pressable>

@@ -53,7 +53,7 @@ const Answers = () => {
                 </Pressable>
               </View>
             </View>
-            <View style={tw`flex justify-start items-start gap-6 p-2`}>
+            <View style={tw`flex justify-start items-start gap-6 px-4`}>
               {buttonOne ? data.ushift : data.myanswers}
             </View>
           </View>
