@@ -43,7 +43,7 @@ const SignUp = () => {
 
     return (
         <>
-            <StatusBar style='dark' backgroundColor={"#f5f7ff"} />
+            <StatusBar style='dark' backgroundColor={"#f5f7ff"} barStyle={'dark-content'} />
             <ScrollView>
                 <KeyboardAvoidingView style={{ flex: 1 }} keyboardVerticalOffset={100}>
                     <View style={tw`gap-8 bg-[#F5F7FF] h-full px-4 py-4`}>
@@ -55,7 +55,7 @@ const SignUp = () => {
                                 Kindly create an <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-sm text-black')}>Ushift</Text> account with either of the options below
                             </Text>
                         </View>
-                        <View style={tw`flex justify-center items-center gap-8 px-4 bg-white rounded-lg`}>
+                        <View style={tw`flex justify-center items-center gap-8 px-4 py-5 bg-white rounded-lg`}>
                             <View style={tw`flex flex-col justify-center items-center gap-5`}>
                                 <View style={tw`flex flex-row justify-center items-center gap-8 bg-[#f5f7ff] rounded-lg py-5 px-5 m-4`}>
                                     <Image source={require('../../assets/google.png')} style={tw`w-5 h-7`}/>
