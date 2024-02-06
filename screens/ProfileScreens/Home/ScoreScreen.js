@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Image } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 import React from 'react';
 import tw from 'twrnc';
 import { Ionicons } from '@expo/vector-icons';
@@ -17,13 +17,13 @@ const ScoreScreen = () => {
             <View style={tw`bg-white w-full pt-4 pl-4`}>
                 <Ionicons name="chevron-back" size={24} color={"#141414"} onPress={() => navigation.goBack()} />
             </View>
-            <View style={tw`flex justify-center items-start gap-4 p-4 bg-white h-full`}>
+            <View style={tw`flex justify-center items-start gap-4 px-4 bg-white h-full`}>
                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-3xl text-left text-[#141414]')}>Great Job! 👍 </Text>
                 <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-left text-[#4a4a68]')}>
                     You have successfully completed all scenarios. To view correct answers click on the scenario score cards below.
                 </Text>
 
-                <View style={tw`flex justify-start items-start gap-4`}>
+                <View style={tw`flex justify-start items-start gap-4 px-4`}>
                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-sm text-[#4a4a68]')}>This is what you scored</Text>
 
                     <View style={tw`flex flex-row justify-between items-center p-4 rounded-lg w-[342px] bg-[#f5f7ff]`}>
@@ -44,10 +44,10 @@ const ScoreScreen = () => {
                     </View>
                 </View>
 
-                <View style={tw`flex flex-row justify-end items-end p-6`}>
+                <View style={tw`flex flex-row justify-end items-end ml-auto`}>
                     <CustomButton style={tw`flex flex-row justify-between items-center gap-8 bg-[#001c46] rounded-lg px-4 py-4 ml-24`} onPress={() => navigation.navigate("Answers")}>
-                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-white text-lg')}>Go back home</Text>
-                        <Image source={require("../../../assets/home-2.png")} />
+                        <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-white text-lg')}>Go to answers</Text>
+                        {/* <Image source={require("../../../assets/home-2.png")} /> */}
                     </CustomButton>
                 </View>
             </View>
