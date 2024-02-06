@@ -29,8 +29,18 @@ const Home = () => {
                             <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-sm text-[#8C8CA1]')}>You are a Champion, stay winning</Text>
                         </View>
                         <View style={tw`flex flex-row justify-end items-end gap-2`}>
-                            <Ionicons name="search-outline" size={24} color={"#001c46"} style={tw`bg-[#F5F7FF] justify-center items-center rounded-full p-2`} />
-                            <Ionicons name='notifications-outline' size={24} color={"#001C46"} style={tw`bg-[#F5F7FF] justify-center items-center rounded-full p-2`} />
+                            <Ionicons
+                                name="search-outline"
+                                size={24} color={"#001c46"}
+                                style={tw`bg-[#F5F7FF] justify-center items-center rounded-full p-2`}
+                                onPress={() => navigation.navigate("Search Screen")}
+                            />
+                            <Ionicons
+                                name='notifications-outline'
+                                size={24} color={"#001C46"}
+                                style={tw`bg-[#F5F7FF] justify-center items-center rounded-full p-2`}
+                                onPress={() => navigation.navigate("Notifications")}
+                            />
                         </View>
                     </View>
                     <View style={tw`flex justify-center items-center gap-4 p-4`}>
