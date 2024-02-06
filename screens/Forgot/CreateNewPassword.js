@@ -21,7 +21,7 @@ const CreateNewPassword = () => {
         <View style={tw`flex justify-start items-start gap-48 bg-[#f5f7ff] h-full p-4`}>
             <View style={tw`flex justify-start items-start gap-8`}>
                 <View style={tw`flex justify-start items-start gap-5`}>
-                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-2xl text-[#141414] text-left')}>Create{"\n"}new password</Text>
+                    <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-3xl text-[#141414] text-left')}>Create{"\n"}new password</Text>
                     <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'w-[263px] text-[#8C8CA1] text-left text-sm')}>Enter new password you would like to use for your subsequent login</Text>
                 </View>
                 <View style={tw`flex justify-center items-center gap-6 bg-white w-[358px] h-[152px] rounded-lg`}>
