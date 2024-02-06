@@ -42,6 +42,8 @@ import SubmitScenarios from './screens/ProfileScreens/Categories/CategoryQuestio
 import Score from './screens/ProfileScreens/Categories/CategoryQuestions/Score';
 import VideoPost from './screens/ProfileScreens/Categories/Videos/VideoPost';
 import VideoScroller from './screens/ProfileScreens/Categories/Videos/VideoScroller';
+import Notification from './screens/Notification/Notification';
+import SearchScreen from './screens/ProfileScreens/Home/SearchScreen';
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -74,8 +76,8 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Account2" component={OnBoarding} options={{ headerShown: false }} />
-          <Stack.Screen name="Create Account" component={SignUp} options={{ headerTitle: "", headerStyle: { backgroundColor: "#f5f7ff" } }} />
-          <Stack.Screen name="Login" component={Login} options={{ headerTitle: "", headerStyle: { backgroundColor: "#f5f7ff" } }} />
+          <Stack.Screen name="Create Account" component={SignUp} options={{ headerTitle: "", headerStyle: { backgroundColor: "#f5f7ff" }, headerLeft: () => <Image source={require('./assets/Lgg.png')} style={tw`ml-4`} /> }} />
+          <Stack.Screen name="Login" component={Login} options={{ headerTitle: "", headerStyle: { backgroundColor: "#f5f7ff" }, headerLeft: () => <Image source={require('./assets/Lgg.png')} style={tw`ml-4`} /> }} />
           <Stack.Screen name="Verify Email" component={VerifyEmail} options={{ headerTitle: "", headerStyle: { backgroundColor: "#f5f7ff" } }} />
           <Stack.Screen name="Reset Password" component={ResetPassword} options={{ headerTitle: "", headerStyle: { backgroundColor: "#f5f7ff" } }} />
           <Stack.Screen name="Reset OTP" component={ResetOTP} options={{ headerTitle: "", headerStyle: { backgroundColor: "#f5f7ff" } }} />
@@ -104,6 +106,8 @@ export default function App() {
           <Stack.Screen name='Submit Scenarios' component={SubmitScenarios} options={{ headerShown: false }} />
           <Stack.Screen name='Score' component={Score} options={{ headerShown: false }} />
           <Stack.Screen name='Video Scroller' component={VideoScroller} options={{ headerShown: false }} />
+          <Stack.Screen name='Notifications' component={Notification} options={{ headerShown: false }} />
+          <Stack.Screen name='Search Screen' component={SearchScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
       {/* <StatusBar style='dark' backgroundColor={"#ffffff"} barStyle={'dark-content'} /> */}

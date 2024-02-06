@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, ImageBackground, SafeAreaView, Text, View, Dimensions, StyleSheet } from 'react-native';
+import { FlatList, ImageBackground, SafeAreaView, Text, View, Dimensions, StyleSheet, Image } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import tw from 'twrnc';
 // import { useNavigate } from "@react-navigation/native";
@@ -62,6 +62,7 @@ const OnBoarding = ({ navigation }) => {
                 ))}</View>
                 <View style={tw`flex justify-center items-center gap-8 mb-12`}>
                     <View style={tw`flex justify-start items-start gap-2`}>
+                        <Image source={require('../../assets/Lgg.png')} />
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Bold.ttf' }, 'text-white text-3xl')}>Welcome to Ushift</Text>
                         <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-white text-base w-[311px]')}>Lorem ipsum dolor sit amet consectetur. Enim rhoncus ultrices adipiscing ac in. Aliquet pharetra volutpat mi egestas</Text>
                     </View>

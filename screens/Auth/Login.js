@@ -1,11 +1,10 @@
-import { Text, View, Pressable, ScrollView, Alert, SafeAreaView, Image } from 'react-native';
-import {StatusBar} from 'expo-status-bar';
+import { Text, View, Pressable, ScrollView, Alert, KeyboardAvoidingView, Image } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import { useState, useEffect } from 'react';
 import tw from 'twrnc';
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import * as LocalAuthentication from 'expo-local-authentication';
-import Constants from 'expo-constants';
 
 //import components
 import CustomInput from '../../components/CustomInput';
@@ -87,9 +86,9 @@ const Login = () => {
   return (
     <>
       <StatusBar backgroundColor='#f5f7ff' />
-      {/* <SafeAreaView style={{ marginTop: Constants.statusBarHeight, backgroundColor: '#f5f7ff' }}> */}
-        <ScrollView style={tw`bg-[#f5f7ff] p-4`}>
-          <View style={tw`flex-1`}>
+      <ScrollView style={tw`bg-[#f5f7ff] p-4`}>
+        <KeyboardAvoidingView keyboardVerticalOffset={100} behavior='padding' style={tw`flex-1`}>
+          <View style={tw`flex-1 pt-12`}>
             <View style={tw`flex justify-center items-start p-2`}>
               <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Welcome 👋{"\n"}Login to your account</Text>
               {/* <Text style={tw.style({ fontFamily: 'DMSans_18pt-Medium.ttf' }, 'text-[#141414] text-3xl')}>Login to your account</Text> */}
@@ -97,7 +96,7 @@ const Login = () => {
             <View style={tw`bg-white flex justify-center items-center gap-8 px-4 py-5 rounded-lg`}>
               <View style={tw`flex flex-col justify-center items-center gap-5`}>
                 <View style={tw`w-[320px] flex flex-row justify-center items-center gap-5 bg-[#f5f7ff] rounded-lg px-5 py-5`}>
-                  <Ionicons name="logo-google" size={24} color={"#ff0000"} />
+                  <Image source={require('../../assets/google.png')} style={tw`w-5 h-7`} />
                   <Text style={tw.style({ fontFamily: 'DMSans_18pt-Light.ttf' }, 'text-base text-center text-[#4a4a68]')}>Login with google</Text>
                 </View>
                 <Text style={tw.style('text-sm text-[#898989] text-center')}>or create account with</Text>
@@ -121,8 +120,8 @@ const Login = () => {
               </Pressable>
             </View>
           </View>
-        </ScrollView>
-      {/* </SafeAreaView> */}
+        </KeyboardAvoidingView>
+      </ScrollView>
     </>
   )
 }
